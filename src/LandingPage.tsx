@@ -6,7 +6,7 @@ import Divider from '@mui/material/Divider';
 import { ThemeProvider, createTheme, getContrastRatio } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 import AppAppBar from './components/AppAppBar';
-import Hero from './components/Hero';
+import GreetingPage from './components/Hero';
 import LogoCollection from './components/LogoCollection';
 import Highlights from './components/Highlights';
 import Pricing from './components/Pricing';
@@ -37,7 +37,7 @@ export default function LandingPage() {
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
       <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
-      <Hero />
+      <GreetingPage />
       <Box sx={{ bgcolor: 'background.default' }}>
         <LogoCollection />
         <Features />
