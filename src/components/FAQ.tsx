@@ -1,13 +1,30 @@
+/* eslint-disable react/no-array-index-key */
 import * as React from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+const itemsToBring = [
+  'сонцезахисні засоби та від опіків',
+  'головні убори',
+  'купальні костюми',
+  'якщо у вас є бажання, рекомендуємо свій власний килимок',
+  'особиста аптечка та все, що ви приймаєте. Але на острові є багато аптек',
+  'зручний одяг для занять йогою',
+  'трішки теплих речей у разі ранкових практик або ж біля океану (може бути трошки вітряно)',
+  'зручне взуття для прогулянок у гори',
+  'капці для будинку',
+];
+
+const thingsToKnow = [
+  'погода. На початку листопада погода на острові, а особливо у нашій частині, може варіюватися від дуже теплої до прохолодної, наприклад вранці може бути 17-18 °C, але вдень піднімається до 22-23 °C. Часом можлива дещо вітряна погода.',
+  'океан: температура океану на початку листопада 23-24 °C, пляжі у нашій частині переважно вулканічні галькові та піщані. Пляжі з золотим звичайним піском на Тенеріфе також присутні, але до них потрібно трішки проїхатися (найближчий до нас - це Playa de Las Teresitas, до якого їхати 45-55 хвилин)',
+];
 
 export default function FAQ() {
   const [expanded, setExpanded] = React.useState<string | false>(false);
@@ -39,7 +56,7 @@ export default function FAQ() {
           textAlign: { sm: 'left', md: 'center' },
         }}
       >
-        Frequently asked questions
+        Питання що часто задаються
       </Typography>
       <Box sx={{ width: '100%' }}>
         <Accordion
@@ -52,20 +69,20 @@ export default function FAQ() {
             id="panel1d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              How do I contact customer support if I have a question or issue?
+              Які речі із собою брати?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography
-              variant="body2"
-              gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
-            >
-              You can reach our customer support team by emailing
-              <Link> support@email.com </Link>
-              or calling our toll-free number. We&apos;re here to assist you
-              promptly.
-            </Typography>
+            {itemsToBring.map((item, index) => (
+              <Typography
+                key={index}
+                variant="body2"
+                gutterBottom
+                sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              >
+                {item}
+              </Typography>
+            ))}
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -78,19 +95,20 @@ export default function FAQ() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Can I return the product if it doesn&apos;t meet my expectations?
+              Що варто знати перед ретритом?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography
-              variant="body2"
-              gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
-            >
-              Absolutely! We offer a hassle-free return policy. If you&apos;re
-              not completely satisfied, you can return the product within
-              [number of days] days for a full refund or exchange.
-            </Typography>
+            {thingsToKnow.map((thing, index) => (
+              <Typography
+                key={index}
+                variant="body2"
+                gutterBottom
+                sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              >
+                {thing}
+              </Typography>
+            ))}
           </AccordionDetails>
         </Accordion>
         <Accordion
@@ -103,7 +121,7 @@ export default function FAQ() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              What makes your product stand out from others in the market?
+              Що робити після залишення заявки?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -112,36 +130,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Our product distinguishes itself through its adaptability,
-              durability, and innovative features. We prioritize user
-              satisfaction and continually strive to exceed expectations in
-              every aspect.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion
-          expanded={expanded === 'panel4'}
-          onChange={handleChange('panel4')}
-        >
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel4d-content"
-            id="panel4d-header"
-          >
-            <Typography component="h3" variant="subtitle2">
-              Is there a warranty on the product, and what does it cover?
-            </Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography
-              variant="body2"
-              gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
-            >
-              Yes, our product comes with a [length of warranty] warranty. It
-              covers covers defects in materials and workmanship. If you
-              encounter any covered by the warranty, please contact our customer
-              support for assistance.
+              Ми з вами зв&apos;яжемось якомога швидше, щоб уточнити всі деталі
             </Typography>
           </AccordionDetails>
         </Accordion>

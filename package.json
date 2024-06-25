@@ -18,8 +18,12 @@
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@mui/system": "^5.15.20",
+    "embla-carousel-react": "^8.1.5",
     "react": "^18.2.0",
+    "react-chrono": "^2.6.1",
+    "react-chrono-extra": "^1.0.0",
     "react-dom": "^18.2.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.20.0"
   },
   "devDependencies": {

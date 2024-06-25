@@ -102,7 +102,7 @@ export default function GreetingPage() {
           </Typography>
           <Box
             component="img"
-            src="../../public/puerto-de-la-cruz.avif"
+            src="/puerto-de-la-cruz.avif"
             alt="Yoga Retreat"
             sx={{
               width: '100%',

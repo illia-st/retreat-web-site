@@ -3,17 +3,21 @@ import { PaletteMode } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
-import { ThemeProvider, createTheme, getContrastRatio } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 import AppAppBar from './components/AppAppBar';
-import GreetingPage from './components/Hero';
-import LogoCollection from './components/LogoCollection';
-import Highlights from './components/Highlights';
-import Pricing from './components/Pricing';
-import Features from './components/Features';
-import Testimonials from './components/Testimonials';
+import GreetingPage from './components/GreetingPage';
+import PriceSection from './components/PriceSection';
 import FAQ from './components/FAQ';
-import Footer from './components/Footer';
+import BasicInfo from './components/BasicInfo';
+import AboutUs from './components/AboutUs';
+import TogetherSection from './components/TogetherSection';
+import LivingSection from './components/LivingSection';
+import ScheduleSection from './components/ScheduleSection';
+import ActivitiesSection from './components/ActivitiesSection';
+import Included from './components/Included';
+import Register from './components/Register';
+import SocialSection from './components/SocialsSection';
 
 export default function LandingPage() {
   const [mode, setMode] = React.useState<PaletteMode>('light');
@@ -37,20 +41,31 @@ export default function LandingPage() {
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
       <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
-      <GreetingPage />
       <Box sx={{ bgcolor: 'background.default' }}>
-        <LogoCollection />
-        <Features />
+        <GreetingPage />
         <Divider />
-        <Testimonials />
+        <BasicInfo />
         <Divider />
-        <Highlights />
+        <AboutUs />
         <Divider />
-        <Pricing />
+        <TogetherSection />
+        <Divider />
+        <LivingSection />
+        <Divider />
+        <ScheduleSection />
+        <Divider />
+        <ActivitiesSection />
+        <Divider />
+        <PriceSection />
+        <Divider />
+        <Included />
+        <Divider />
+        <Register />
+        <Divider />
         <Divider />
         <FAQ />
         <Divider />
-        <Footer />
+        <SocialSection />
       </Box>
     </ThemeProvider>
   );
