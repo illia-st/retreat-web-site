@@ -1,8 +1,8 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { Container, Grid, Box, Typography } from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
+import EmblaCarouselSimple from './caruosels/Simple';
 
 const teamMembers = [
   {
@@ -17,12 +17,16 @@ const teamMembers = [
       Моє хобі - це чай та чайні церемонії, з якими я вас познайомлю на нашому ретриті.
     `,
     images: [
-      '/mz1.jpg',
-      // '/mz2.jpg',
-      // '/mz3.jpg',
-      // '/mz4.jpg',
-      // '/mz5.jpg',
-      '/mz6.jpg',
+      {
+        image: '/mz1.jpg',
+        maxWidth: 800,
+        maxHeight: 1200,
+      },
+      {
+        image: '/mz4.jpg',
+        maxWidth: 800,
+        maxHeight: 1200,
+      },
     ],
   },
   {
@@ -35,43 +39,59 @@ const teamMembers = [
       Наразі я розширюю свій досвід та знання, вивчаючи Джйотіш (ведичну) астрологію, додаючи ще один інструмент до свого холістичного підходу в роботі із різними оболонками - як ментальною, так і фізичною. 
       Мої заспокійливі сеанси йоги-нідри допоможуть вам глибоко фізично розслабитися, зберігаючи розум на фокусі ваших відчуттів, що приведе вас до справжнього розслаблення тіла та розуму.
     `,
-    images: ['/Chz_Vika2.JPG', '/Chz_Vika1.JPG'],
+    images: [
+      {
+        image: '/Chz_Vika2.JPG',
+        maxWidth: 800,
+        maxHeight: 1200,
+      },
+      {
+        image: '/vika_asana.jpg',
+        maxWidth: 800,
+        maxHeight: 1200,
+      },
+    ],
   },
 ];
 
 function AboutUs() {
   return (
     <Container sx={{ mt: 4, mb: 4 }}>
-      <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
+      <Typography
+        variant="h2"
+        textAlign="center"
+        sx={{ mb: 4, fontWeight: 'bold' }}
+      >
         Про нас
       </Typography>
       {teamMembers.map((member, index) => (
         <Grid container spacing={4} key={index} sx={{ mb: 4 }}>
           <Grid item xs={12} sm={4}>
-            <Carousel showThumbs={false} infiniteLoop>
-              {member.images.map((image, imgIndex) => (
-                <Box
-                  key={imgIndex}
-                  component="img"
-                  src={image}
-                  alt={`${member.name} ${imgIndex + 1}`}
-                  sx={{
-                    width: '100%',
-                    height: 'auto',
-                    borderRadius: 2,
-                  }}
-                />
-              ))}
-            </Carousel>
+            <EmblaCarouselSimple slides={member.images} options={{}} />
           </Grid>
           <Grid item xs={12} sm={8}>
-            <Typography variant="h4" component="h3" sx={{ mb: 2 }}>
+            <Typography
+              variant="h4"
+              component="h3"
+              sx={{ mb: 2, fontWeight: 'bold', fontSize: '2rem' }}
+            >
               {member.name}
             </Typography>
-            <Typography variant="h6" component="h4" sx={{ mb: 2 }}>
+            <Typography
+              variant="h6"
+              component="h4"
+              sx={{ mb: 2, fontStyle: 'italic', fontSize: '1.25rem' }}
+            >
               {member.title}
             </Typography>
-            <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>
+            <Typography
+              variant="body1"
+              sx={{
+                whiteSpace: 'pre-line',
+                fontSize: '1.1rem',
+                lineHeight: 1.6,
+              }}
+            >
               {member.description}
             </Typography>
           </Grid>

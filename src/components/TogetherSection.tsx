@@ -1,21 +1,59 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { Container, Grid, Box, Typography, Paper } from '@mui/material';
-// import { Carousel } from 'react-responsive-carousel';
-// import useEmblaCarousel from 'embla-carousel-react';
+import { Container, Grid, Typography } from '@mui/material';
+import EmblaCarouselAutoHeight from './caruosels/AutoHeight';
+import EmblaCarouselSimple from './caruosels/Simple';
 
-// const diplomas = ['/ch_cert_1.png', '/ch_cert_2.PNG'];
+const diplomas = [
+  {
+    image: '/ch_cert_1.png',
+    maxHeight: 1200,
+    maxWidth: 1000,
+  },
+  {
+    image: '/ch_cert_2.PNG',
+    maxHeight: 1200,
+    maxWidth: 1000,
+  },
+  {
+    image: '/mt_cert.png',
+    maxHeight: 1200,
+    maxWidth: 1000,
+  },
+];
+const asanas = [
+  {
+    image: '/asana1.jpg',
+    maxHeight: 1000,
+    maxWidth: 600,
+  },
+  {
+    image: '/asana2.jpg',
+    maxHeight: 1000,
+    maxWidth: 600,
+  },
+];
 
 function TogetherSection() {
-  // const [emblaRef] = useEmblaCarousel();
   return (
     <Container sx={{ mt: 4, mb: 4 }}>
       <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
         Чому ми робимо це разом
       </Typography>
-      <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
-          <Typography variant="body1" sx={{ mb: 2 }}>
+      <Grid
+        container
+        spacing={4}
+        sx={{ display: 'flex', justifyContent: 'right' }}
+      >
+        <Grid item xs={12} sm={4}>
+          <Typography
+            variant="body1"
+            sx={{
+              whiteSpace: 'pre-line',
+              fontSize: '1.1rem',
+              lineHeight: 1.6,
+            }}
+          >
             Ми зустрілися 2 роки тому і зрозуміли - це кармічно. Розділяючи одне
             ім’я, дружбу та найголовніше - любов до йоги, ідея про створення
             нашого сумісного ретриту не змусила довго чекати свого виходу в
@@ -25,56 +63,14 @@ function TogetherSection() {
           </Typography>
         </Grid>
         {/* Need to add a cool carousel */}
-        <Grid item xs={12} md={6}>
-          <Box
-            component="img"
-            src="/asana.jpg"
-            alt="Спільна фотка у асанах"
-            sx={{
-              width: '100%',
-              height: 'auto',
-              borderRadius: 2,
-              mb: 2,
-            }}
-          />
+        <Grid item xs={12} sm={4}>
+          <EmblaCarouselSimple slides={asanas} options={{}} />
         </Grid>
         <Grid item xs={12}>
-          <Paper elevation={3} sx={{ padding: 2, textAlign: 'center' }}>
-            <Typography variant="h5" sx={{ mb: 2 }}>
-              Наші Дипломи
-            </Typography>
-            {/* <div className="embla" ref={emblaRef}>
-              <div className="embla__container">
-                {diplomas.map((diplomaImage, imgIndex) => (
-                  <Box
-                    key={imgIndex}
-                    className="embla__slide"
-                    component="img"
-                    src={diplomaImage}
-                    // sx={{
-                    //   width: '100%',
-                    //   height: 'auto',
-                    //   borderRadius: 2,
-                    // }}
-                  />
-                ))}
-              </div>
-            </div> */}
-            {/* <Carousel>
-              {diplomas.map((diplomaImage, imgIndex) => (
-                <Box
-                  key={imgIndex}
-                  component="img"
-                  src={diplomaImage}
-                  sx={{
-                    width: '100%',
-                    height: 'auto',
-                    borderRadius: 2,
-                  }}
-                />
-              ))}
-            </Carousel> */}
-          </Paper>
+          <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
+            Наші Дипломи
+          </Typography>
+          <EmblaCarouselAutoHeight slides={diplomas} options={{}} />
         </Grid>
       </Grid>
     </Container>
