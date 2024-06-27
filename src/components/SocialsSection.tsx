@@ -20,14 +20,14 @@ const people = [
     role: 'Universal Yoga Teacher RYT 300',
     instagram: 'https://www.instagram.com/oum_victory/',
     whatsApp: 'https://wa.me/798236967',
-    avatar: '/soc_mt.png',
+    avatar: '/retreat-web-site/soc_mt.png',
   },
   {
     name: 'Вікторія Чорножук',
     role: 'Traditional Hatha and Vinyasa Teacher RYT 200',
     instagram: 'https://www.instagram.com/vickydrum/',
     telegram: 'https://t.me/vickydrum',
-    avatar: '/soc_ch.png',
+    avatar: '/retreat-web-site/soc_ch.png',
   },
 ];
 

@@ -5,29 +5,29 @@ import EmblaCarouselSimple from './caruosels/Simple';
 
 const diplomas = [
   {
-    image: '/ch_cert_1.png',
+    image: '/retreat-web-site/ch_cert_1.png',
     maxHeight: 1200,
     maxWidth: 1000,
   },
   {
-    image: '/ch_cert_2.PNG',
+    image: '/retreat-web-site/ch_cert_2.PNG',
     maxHeight: 1200,
     maxWidth: 1000,
   },
   {
-    image: '/mt_cert.png',
+    image: '/retreat-web-site/mt_cert.png',
     maxHeight: 1200,
     maxWidth: 1000,
   },
 ];
 const asanas = [
   {
-    image: '/asana1.jpg',
+    image: '/retreat-web-site/asana1.jpg',
     maxHeight: 1000,
     maxWidth: 600,
   },
   {
-    image: '/asana2.jpg',
+    image: '/retreat-web-site/asana2.jpg',
     maxHeight: 1000,
     maxWidth: 600,
   },

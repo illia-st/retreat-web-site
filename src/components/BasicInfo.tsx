@@ -37,42 +37,42 @@ const sections = [
     професійний контент та фотосесія`,
     images2: [
       {
-        image: '/places/IMG_6683.jpg',
+        image: '/retreat-web-site/places/IMG_6683.jpg',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/places/IMG_6684.jpg',
+        image: '/retreat-web-site/places/IMG_6684.jpg',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/places/IMG_6715.jpg',
+        image: '/retreat-web-site/places/IMG_6715.jpg',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/places/IMG_6716.jpg',
+        image: '/retreat-web-site/places/IMG_6716.jpg',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/places/IMG_6802.jpg',
+        image: '/retreat-web-site/places/IMG_6802.jpg',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/places/IMG_7263.PNG',
+        image: '/retreat-web-site/places/IMG_7263.PNG',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/places/iStock-1264675861 RFC.avif',
+        image: '/retreat-web-site/places/iStock-1264675861 RFC.avif',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/places/puerto-de-la-cruz-15.jpeg',
+        image: '/retreat-web-site/places/puerto-de-la-cruz-15.jpeg',
         maxHeight: 500,
         maxWidth: 300,
       },

@@ -18,12 +18,12 @@ const teamMembers = [
     `,
     images: [
       {
-        image: '/mz1.jpg',
+        image: '/retreat-web-site/mz1.jpg',
         maxWidth: 800,
         maxHeight: 1200,
       },
       {
-        image: '/mz4.jpg',
+        image: '/retreat-web-site/mz4.jpg',
         maxWidth: 800,
         maxHeight: 1200,
       },
@@ -41,12 +41,12 @@ const teamMembers = [
     `,
     images: [
       {
-        image: '/Chz_Vika2.JPG',
+        image: '/retreat-web-site/Chz_Vika2.JPG',
         maxWidth: 800,
         maxHeight: 1200,
       },
       {
-        image: '/vika_asana.jpg',
+        image: '/retreat-web-site/vika_asana.jpg',
         maxWidth: 800,
         maxHeight: 1200,
       },

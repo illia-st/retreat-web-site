@@ -17,25 +17,25 @@ const items = [
     icon: <Looks4Icon />,
     title: 'Проживання у 4-місній кімнаті',
     price: 'Early bird (до 11.07) 989 €',
-    image: '/4place-standart.jpg',
+    image: '/retreat-web-site/4place-standart.jpg',
   },
   {
     icon: <Looks3Icon />,
     title: 'Проживання у 3-місній кімнаті',
     price: 'Early bird (до 11.07) 998 €',
-    image: '/3place-standart.jpg',
+    image: '/retreat-web-site/3place-standart.jpg',
   },
   {
     icon: <LooksTwoIcon />,
     title: 'Проживання у 2-місній кімнаті',
     price: 'Early bird (до 11.07) 1009 €',
-    image: '/2place_standart.jpg',
+    image: '/retreat-web-site/2place_standart.jpg',
   },
   {
     icon: <Filter2Icon />,
     title: 'Проживання у покращеній 2-місній кімнаті',
     price: 'Early bird (до 11.07) 1049 €',
-    image: '/2place_better.jpg',
+    image: '/retreat-web-site/2place_better.jpg',
   },
 ];
 
