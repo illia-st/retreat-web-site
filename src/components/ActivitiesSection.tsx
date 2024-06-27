@@ -45,13 +45,15 @@ const activities = [
   },
 ];
 
-const ActivityCard = styled(Paper)({
+const ActivityCard = styled(Paper)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
   height: '100%',
   padding: '16px',
-});
+  backgroundColor: theme.palette.primary.main,
+  color: theme.palette.primary.contrastText,
+}));
 
 function ActivitiesSection() {
   return (
@@ -69,7 +71,12 @@ function ActivitiesSection() {
           // eslint-disable-next-line react/no-array-index-key
           <Grid item xs={12} sm={6} md={4} key={index}>
             <ActivityCard elevation={3}>
-              <Box display="flex" alignItems="center" mb={2}>
+              <Box
+                display="flex"
+                alignItems="center"
+                mb={2}
+                sx={{ backgroundColor: 'primary.main' }}
+              >
                 <ListItemIcon>{activity.icon}</ListItemIcon>
                 <Typography variant="h6">{activity.title}</Typography>
               </Box>

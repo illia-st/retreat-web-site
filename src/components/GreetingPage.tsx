@@ -63,7 +63,6 @@ export default function GreetingPage() {
               flexDirection: { xs: 'column', md: 'row' },
               alignSelf: 'center',
               textAlign: 'center',
-              // fontSize: 'clamp(3.5rem, 10vw, 4rem)',
             }}
           >
             Release. Refresh. Develop
@@ -75,7 +74,6 @@ export default function GreetingPage() {
               flexDirection: { xs: 'column', md: 'row' },
               alignSelf: 'center',
               textAlign: 'center',
-              // fontSize: 'clamp(3.5rem, 10vw, 4rem)',
             }}
           >
             4-9 November
@@ -87,7 +85,6 @@ export default function GreetingPage() {
               flexDirection: { xs: 'column', md: 'row' },
               alignSelf: 'center',
               textAlign: 'center',
-              // fontSize: 'clamp(3.5rem, 10vw, 4rem)',
             }}
           >
             Tenerife

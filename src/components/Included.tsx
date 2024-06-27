@@ -9,6 +9,7 @@ import {
   CardContent,
   ListItemIcon,
   Divider,
+  useTheme,
 } from '@mui/material';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import CloseIcon from '@mui/icons-material/Close';
@@ -37,6 +38,7 @@ const notIncludedItems = [
 ];
 
 function IncludedSection() {
+  const theme = useTheme();
   return (
     <Container sx={{ mt: 4, mb: 4 }}>
       <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
@@ -51,6 +53,8 @@ function IncludedSection() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
+                backgroundColor: theme.palette.primary.main,
+                color: theme.palette.primary.contrastText,
               }}
             >
               <CardContent>
@@ -63,7 +67,7 @@ function IncludedSection() {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: 'auto', mr: 1 }}>
-                    <CheckCircleRoundedIcon color="primary" />
+                    <CheckCircleRoundedIcon />
                   </ListItemIcon>
                   <Typography variant="subtitle1">{item}</Typography>
                 </Box>
@@ -77,6 +81,7 @@ function IncludedSection() {
 }
 
 function NotIncludedSection() {
+  const theme = useTheme();
   return (
     <Container sx={{ mt: 4, mb: 4 }}>
       <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
@@ -98,6 +103,8 @@ function NotIncludedSection() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
+                backgroundColor: theme.palette.primary.main,
+                color: theme.palette.primary.contrastText,
               }}
             >
               <CardContent>

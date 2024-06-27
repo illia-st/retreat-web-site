@@ -123,9 +123,19 @@ function BasicInfo() {
           pb: { xs: 1, sm: 1.5 },
         }}
       >
-        <Accordion sx={{ marginBottom: 0.1, width: '100%' }}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography variant="h6">{sections[0].title}</Typography>
+        <Accordion
+          sx={{
+            marginBottom: 0.1,
+            width: '100%',
+            backgroundColor: 'primary.main',
+          }}
+        >
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon htmlColor="primary.contrastText" />}
+          >
+            <Typography variant="h6" sx={{ color: 'primary.contrastText' }}>
+              {sections[0].title}
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Grid container spacing={4}>
@@ -136,6 +146,7 @@ function BasicInfo() {
                     whiteSpace: 'pre-line',
                     fontSize: '1.1rem',
                     lineHeight: 1.6,
+                    color: 'primary.contrastText',
                   }}
                 >
                   {sections[0].content1}
@@ -158,6 +169,7 @@ function BasicInfo() {
                     whiteSpace: 'pre-line',
                     fontSize: '1.1rem',
                     lineHeight: 1.6,
+                    color: 'primary.contrastText',
                   }}
                 >
                   {sections[0].content2}
@@ -178,9 +190,19 @@ function BasicInfo() {
             pb: { xs: 1, sm: 1.5 },
           }}
         >
-          <Accordion sx={{ marginBottom: 0.1, width: '100%' }}>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="h6">{section.title}</Typography>
+          <Accordion
+            sx={{
+              marginBottom: 0.1,
+              width: '100%',
+              backgroundColor: 'primary.main',
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon htmlColor="primary.contrastText" />}
+            >
+              <Typography variant="h6" sx={{ color: 'primary.contrastText' }}>
+                {section.title}
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography
@@ -189,6 +211,7 @@ function BasicInfo() {
                   whiteSpace: 'pre-line',
                   fontSize: '1.1rem',
                   lineHeight: 1.6,
+                  color: 'primary.contrastText',
                 }}
               >
                 {section.content}

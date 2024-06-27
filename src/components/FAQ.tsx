@@ -62,13 +62,19 @@ export default function FAQ() {
         <Accordion
           expanded={expanded === 'panel1'}
           onChange={handleChange('panel1')}
+          sx={{ backgroundColor: 'primary.main' }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1d-content"
             id="panel1d-header"
+            sx={{ color: 'primary.contrastText' }}
           >
-            <Typography component="h3" variant="subtitle2">
+            <Typography
+              component="h3"
+              variant="subtitle2"
+              sx={{ color: 'primary.contrastText' }}
+            >
               Які речі із собою брати?
             </Typography>
           </AccordionSummary>
@@ -78,7 +84,13 @@ export default function FAQ() {
                 key={index}
                 variant="body2"
                 gutterBottom
-                sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+                sx={{
+                  maxWidth: {
+                    sm: '100%',
+                    md: '70%',
+                    color: 'primary.contrastText',
+                  },
+                }}
               >
                 {item}
               </Typography>
@@ -88,13 +100,18 @@ export default function FAQ() {
         <Accordion
           expanded={expanded === 'panel2'}
           onChange={handleChange('panel2')}
+          sx={{ backgroundColor: 'primary.main' }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2d-content"
             id="panel2d-header"
           >
-            <Typography component="h3" variant="subtitle2">
+            <Typography
+              component="h3"
+              variant="subtitle2"
+              sx={{ color: 'primary.contrastText' }}
+            >
               Що варто знати перед ретритом?
             </Typography>
           </AccordionSummary>
@@ -104,7 +121,13 @@ export default function FAQ() {
                 key={index}
                 variant="body2"
                 gutterBottom
-                sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+                sx={{
+                  maxWidth: {
+                    sm: '100%',
+                    md: '70%',
+                    color: 'primary.contrastText',
+                  },
+                }}
               >
                 {thing}
               </Typography>
@@ -114,13 +137,18 @@ export default function FAQ() {
         <Accordion
           expanded={expanded === 'panel3'}
           onChange={handleChange('panel3')}
+          sx={{ backgroundColor: 'primary.main' }}
         >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel3d-content"
             id="panel3d-header"
           >
-            <Typography component="h3" variant="subtitle2">
+            <Typography
+              component="h3"
+              variant="subtitle2"
+              sx={{ color: 'primary.contrastText' }}
+            >
               Що робити після залишення заявки?
             </Typography>
           </AccordionSummary>
@@ -128,7 +156,13 @@ export default function FAQ() {
             <Typography
               variant="body2"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
+              sx={{
+                maxWidth: {
+                  sm: '100%',
+                  md: '70%',
+                  color: 'primary.contrastText',
+                },
+              }}
             >
               Ми з вами зв&apos;яжемось якомога швидше, щоб уточнити всі деталі
             </Typography>
