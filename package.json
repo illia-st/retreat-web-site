@@ -1,4 +1,5 @@
 {
+  "homepage": "https://illia-st.github.io/retreat-web-site",
   "name": "retreat-web-site",
   "private": true,
   "version": "0.0.0",
@@ -6,6 +7,8 @@
   "scripts": {
     "dev": "vite --port 4000",
     "build": "tsc && vite build",
+    "predeploy": "tsc && vite build",
+    "deploy": "gh-pages -d build",
     "preview": "vite preview",
     "test": "vitest",
     "lint": "eslint --ext .js,.cjs,.ts,.tsx .",
@@ -46,6 +49,7 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^6.1.1",
     "jsdom": "^23.0.0",
     "prettier": "^3.1.0",
     "typescript": "^5.3.2",
