@@ -16,25 +16,30 @@ const items = [
   {
     icon: <Looks4Icon />,
     title: 'Проживання у 4-місній кімнаті',
-    price: 'Early bird (до 11.07) 989 €',
+    titleWithPrice: 'Проживання у 4-місній кімнаті 1099 € (до 11.07)',
+    price: 'Early bird (до 11.07) 1099 €',
     image: '/retreat-web-site/4place-standart.jpg',
   },
   {
     icon: <Looks3Icon />,
     title: 'Проживання у 3-місній кімнаті',
-    price: 'Early bird (до 11.07) 998 €',
+    titleWithPrice: 'Проживання у 3-місній кімнаті 1129 € (до 11.07)',
+    price: 'Early bird (до 11.07) 1129 €',
     image: '/retreat-web-site/3place-standart.jpg',
   },
   {
     icon: <LooksTwoIcon />,
     title: 'Проживання у 2-місній кімнаті',
-    price: 'Early bird (до 11.07) 1009 €',
+    titleWithPrice: 'Проживання у 2-місній кімнаті 1149 € (до 11.07)',
+    price: 'Early bird (до 11.07) 1149 €',
     image: '/retreat-web-site/2place_standart.jpg',
   },
   {
     icon: <Filter2Icon />,
     title: 'Проживання у покращеній 2-місній кімнаті',
-    price: 'Early bird (до 11.07) 1049 €',
+    titleWithPrice:
+      'Проживання у покращеній 2-місній кімнаті 1159 € (до 11.07)',
+    price: 'Early bird (до 11.07) 1159 €',
     image: '/retreat-web-site/2place_better.jpg',
   },
 ];
@@ -71,11 +76,11 @@ export default function PriceSection() {
             gap={1}
             sx={{ display: { xs: 'auto', sm: 'none' } }}
           >
-            {items.map(({ title }, index) => (
+            {items.map(({ titleWithPrice }, index) => (
               <Chip
                 // eslint-disable-next-line react/no-array-index-key
                 key={index}
-                label={title}
+                label={titleWithPrice}
                 onClick={() => handleItemClick(index)}
                 sx={{
                   borderColor: (theme) => {
@@ -93,7 +98,7 @@ export default function PriceSection() {
                   backgroundColor:
                     selectedItemIndex === index ? 'primary.main' : '',
                   '& .MuiChip-label': {
-                    color: selectedItemIndex === index ? '#fff' : '',
+                    color: selectedItemIndex === index ? '#000' : '',
                   },
                 }}
               />
@@ -227,6 +232,22 @@ export default function PriceSection() {
               }}
             />
           </Card>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Typography
+            variant="body1"
+            style={{
+              marginBottom: '1rem',
+              fontWeight: 'lighter',
+            }}
+          >
+            • Депозит-бронь 300 €, який не повертається (гроші повертаються
+            тільки за умови, якщо ретрит скасовано з нашої боку)
+          </Typography>
+          <Typography variant="body1" style={{ fontWeight: 'lighter' }}>
+            • Можлива оплата частинами через будь-яку зручну для вас платіжну
+            систему
+          </Typography>
         </Grid>
       </Grid>
     </Container>

@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
+import { blue } from '@mui/material/colors';
 import AppAppBar from './components/AppAppBar';
 import GreetingPage from './components/GreetingPage';
 import PriceSection from './components/PriceSection';
@@ -25,10 +25,10 @@ export default function LandingPage() {
     palette: {
       mode,
       primary: {
-        light: red[200],
-        main: red[500],
-        dark: red[800],
-        contrastText: '#fff',
+        light: blue[100],
+        main: blue[200],
+        dark: blue[400],
+        contrastText: '#000',
       },
     },
   });

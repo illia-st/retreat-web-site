@@ -41,7 +41,7 @@ export default function GreetingPage() {
               fontSize: 'clamp(3.5rem, 10vw, 4rem)',
             }}
           >
-            Deep Dive Yoga&nbsp;
+            Deep Dive&nbsp;
             <Typography
               component="span"
               variant="h1"
@@ -53,7 +53,7 @@ export default function GreetingPage() {
                     : 'primary.light',
               }}
             >
-              Retreat
+              Yoga Retreat
             </Typography>
           </Typography>
           <Typography
@@ -66,7 +66,7 @@ export default function GreetingPage() {
               // fontSize: 'clamp(3.5rem, 10vw, 4rem)',
             }}
           >
-            Refresh. De-Stress. Develop
+            Release. Refresh. Develop
           </Typography>
           <Typography
             variant="h3"
