@@ -8,7 +8,7 @@
     "dev": "vite --port 4000",
     "build": "tsc && vite build",
     "predeploy": "tsc && vite build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "preview": "vite preview",
     "test": "vitest",
     "lint": "eslint --ext .js,.cjs,.ts,.tsx .",
