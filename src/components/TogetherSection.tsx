@@ -1,7 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import { Container, Grid, Typography } from '@mui/material';
-import EmblaCarouselAutoHeight from './caruosels/AutoHeight';
 import EmblaCarouselSimple from './caruosels/Simple';
 
 const diplomas = [
@@ -37,7 +36,7 @@ const asanas = [
 function TogetherSection() {
   return (
     <Container sx={{ mt: 4, mb: 4 }}>
-      <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
+      <Typography id="together" variant="h2" textAlign="center" sx={{ mb: 4 }}>
         Чому ми робимо це разом
       </Typography>
       <Grid
@@ -70,7 +69,7 @@ function TogetherSection() {
           <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
             Наші Дипломи
           </Typography>
-          <EmblaCarouselAutoHeight slides={diplomas} options={{}} />
+          <EmblaCarouselSimple slides={diplomas} options={{}} />
         </Grid>
       </Grid>
     </Container>

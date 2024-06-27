@@ -17,25 +17,25 @@ const items = [
     icon: <Looks4Icon />,
     title: 'Проживання у 4-місній кімнаті',
     price: 'Early bird (до 11.07) 989 €',
-    image: 'url(/4place-standart.jpg)',
+    image: '/4place-standart.jpg',
   },
   {
     icon: <Looks3Icon />,
     title: 'Проживання у 3-місній кімнаті',
     price: 'Early bird (до 11.07) 998 €',
-    image: 'url(/3place-standart.jpg)',
+    image: '/3place-standart.jpg',
   },
   {
     icon: <LooksTwoIcon />,
     title: 'Проживання у 2-місній кімнаті',
     price: 'Early bird (до 11.07) 1009 €',
-    image: 'url(/2place_standart.jpg)',
+    image: '/2place_standart.jpg',
   },
   {
     icon: <Filter2Icon />,
     title: 'Проживання у покращеній 2-місній кімнаті',
     price: 'Early bird (до 11.07) 1049 €',
-    image: 'url(/2place_better.jpg)',
+    image: '/2place_better.jpg',
   },
 ];
 
@@ -49,7 +49,7 @@ export default function PriceSection() {
   const selectedFeature = items[selectedItemIndex];
 
   return (
-    <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
+    <Container id="price" sx={{ py: { xs: 8, sm: 16 } }}>
       <Grid container spacing={6}>
         <Grid item xs={12} md={6}>
           <div>
@@ -108,22 +108,16 @@ export default function PriceSection() {
             }}
           >
             <Box
+              component="img"
+              src={selectedFeature.image}
+              alt={`section image ${selectedFeature.title}`}
               sx={{
-                backgroundImage: items[selectedItemIndex].image,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                minHeight: 280,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                borderRadius: 2,
               }}
             />
-            <Box sx={{ px: 2, pb: 2 }}>
-              <Typography
-                color="text.primary"
-                variant="body2"
-                fontWeight="bold"
-              >
-                {selectedFeature.title}
-              </Typography>
-            </Box>
           </Box>
           <Stack
             direction="column"
@@ -222,12 +216,14 @@ export default function PriceSection() {
             }}
           >
             <Box
+              component="img"
+              src={selectedFeature.image}
+              alt={`section image ${selectedFeature.title}`}
               sx={{
-                m: 'auto',
-                width: 420,
-                height: 500,
-                backgroundSize: 'contain',
-                backgroundImage: items[selectedItemIndex].image,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                borderRadius: 2,
               }}
             />
           </Card>

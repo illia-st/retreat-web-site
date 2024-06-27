@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
 import {
-  Stack,
+  Grid,
   Typography,
   Box,
   Accordion,
@@ -10,27 +10,73 @@ import {
   Container,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import EmblaCarouselSimple from './caruosels/Simple';
 
 const sections = [
   {
     title: 'Що вас чекає:',
-    content: `
-      5 днів на вулканічному острові вічної весни з унікальною природою
-      2 практики в день якісної аутентичної йоги, яка розширить ліміти вашого тіла та розуму
-      щоденні практики медитацій, пранаям (дихання)
-      цвяхостояння
-      глибока релаксація - Йога-нідра зі співочими чашами
-      Фото з нами в одній із асан
-      проживання у 100-річному традиційному ретритному центрі з видом на океан
-      вегетаріанське детокс харчування двічі на день від холістичного шеф-кухаря
-      знайомство з філософією Йоги
-      коло сили та підтримки
-      чайні церемонії та ароматерапії
-      подорожі островом, пляжі з чорним вулканічним піском, фруктові плантації
-      відпочинок, перезавантаження та новий погляд на звичні речі 
-      професійний контент та фотосесія
-    `,
-    images: ['/path/to/your/image1.jpg', '/path/to/your/image2.jpg'],
+    content1: `5 днів на вулканічному острові вічної весни з унікальною природою
+    2 практики в день якісної аутентичної йоги, яка розширить ліміти вашого тіла та розуму
+    щоденні практики медитацій, пранаям (дихання)
+    цвяхостояння
+    глибока релаксація - Йога-нідра зі співочими чашами`,
+    images1: [
+      {
+        image: '/asana1.jpg',
+        maxHeight: 500,
+        maxWidth: 300,
+      },
+    ],
+    content2: `проживання у 100-річному традиційному ретритному центрі з видом на океан
+    вегетаріанське детокс харчування двічі на день від холістичного шеф-кухаря
+    знайомство з філософією Йоги
+    коло сили та підтримки
+    чайні церемонії та ароматерапії
+    подорожі островом, пляжі з чорним вулканічним піском, фруктові плантації
+    відпочинок, перезавантаження та новий погляд на звичні речі 
+    професійний контент та фотосесія`,
+    images2: [
+      {
+        image: '/places/IMG_6683.jpg',
+        maxHeight: 500,
+        maxWidth: 300,
+      },
+      {
+        image: '/places/IMG_6684.jpg',
+        maxHeight: 500,
+        maxWidth: 300,
+      },
+      {
+        image: '/places/IMG_6715.jpg',
+        maxHeight: 500,
+        maxWidth: 300,
+      },
+      {
+        image: '/places/IMG_6716.jpg',
+        maxHeight: 500,
+        maxWidth: 300,
+      },
+      {
+        image: '/places/IMG_6802.jpg',
+        maxHeight: 500,
+        maxWidth: 300,
+      },
+      {
+        image: '/places/IMG_7263.PNG',
+        maxHeight: 500,
+        maxWidth: 300,
+      },
+      {
+        image: '/places/iStock-1264675861 RFC.avif',
+        maxHeight: 500,
+        maxWidth: 300,
+      },
+      {
+        image: '/places/puerto-de-la-cruz-15.jpeg',
+        maxHeight: 500,
+        maxWidth: 300,
+      },
+    ],
   },
   {
     title: 'Що отримаєш від ретриту:',
@@ -68,7 +114,60 @@ function BasicInfo() {
         mb: 4,
       }}
     >
-      {sections.map((section, index) => (
+      <Container
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          pt: { xs: 1, sm: 1.5 },
+          pb: { xs: 1, sm: 1.5 },
+        }}
+      >
+        <Accordion sx={{ marginBottom: 0.1, width: '100%' }}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography variant="h6">{sections[0].title}</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Grid container spacing={4}>
+              <Grid item xs={12}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    whiteSpace: 'pre-line',
+                    fontSize: '1.1rem',
+                    lineHeight: 1.6,
+                  }}
+                >
+                  {sections[0].content1}
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid container spacing={4} sx={{ marginTop: 2 }}>
+              <Grid item xs={12} md={6}>
+                {sections[0].images2 && (
+                  <EmblaCarouselSimple
+                    slides={sections[0].images2}
+                    options={{}}
+                  />
+                )}
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    whiteSpace: 'pre-line',
+                    fontSize: '1.1rem',
+                    lineHeight: 1.6,
+                  }}
+                >
+                  {sections[0].content2}
+                </Typography>
+              </Grid>
+            </Grid>
+          </AccordionDetails>
+        </Accordion>
+      </Container>
+      {sections.slice(1).map((section, index) => (
         <Container
           key={index}
           sx={{
@@ -84,27 +183,16 @@ function BasicInfo() {
               <Typography variant="h6">{section.title}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>
+              <Typography
+                variant="body1"
+                sx={{
+                  whiteSpace: 'pre-line',
+                  fontSize: '1.1rem',
+                  lineHeight: 1.6,
+                }}
+              >
                 {section.content}
               </Typography>
-              {section.images && (
-                <Stack direction="row" spacing={2} sx={{ marginTop: 2 }}>
-                  {section.images.map((image, imgIndex) => (
-                    <Box
-                      key={imgIndex}
-                      component="img"
-                      src={image}
-                      alt={`section image ${imgIndex + 1}`}
-                      sx={{
-                        width: '100%',
-                        maxHeight: '200px',
-                        objectFit: 'cover',
-                        borderRadius: 2,
-                      }}
-                    />
-                  ))}
-                </Stack>
-              )}
             </AccordionDetails>
           </Accordion>
         </Container>

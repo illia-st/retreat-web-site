@@ -56,7 +56,12 @@ const ActivityCard = styled(Paper)({
 function ActivitiesSection() {
   return (
     <Container sx={{ mb: 4, mt: 4 }}>
-      <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
+      <Typography
+        id="activities"
+        variant="h2"
+        textAlign="center"
+        sx={{ mb: 4 }}
+      >
         Які додаткові активності ми робитимемо (дещо оплачується окремо)
       </Typography>
       <Grid container spacing={4}>

@@ -36,7 +36,6 @@ export default function FAQ() {
 
   return (
     <Container
-      id="faq"
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
@@ -48,6 +47,7 @@ export default function FAQ() {
       }}
     >
       <Typography
+        id="faq"
         component="h2"
         variant="h4"
         color="text.primary"

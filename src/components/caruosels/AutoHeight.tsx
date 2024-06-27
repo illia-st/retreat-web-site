@@ -29,16 +29,16 @@ const EmblaCarouselAutoHeight: React.FC<PropType> = (props) => {
           {slides.map((slide, index) => (
             <div
               className="embla__slide"
-              style={{
-                maxHeight: slide.maxHeight,
-                maxWidth: slide.maxWidth,
-                width: '100%',
-                height: '100%',
-              }}
+              // style={{
+              //   maxHeight: slide.maxHeight,
+              //   maxWidth: slide.maxWidth,
+              //   width: '100%',
+              //   height: '100%',
+              // }}
               key={index}
             >
               <img
-                className="embla__slide__img"
+                className="embla__slide__img__auto__height"
                 src={slide.image}
                 alt="Your alt text"
               />

@@ -58,6 +58,7 @@ function AboutUs() {
   return (
     <Container sx={{ mt: 4, mb: 4 }}>
       <Typography
+        id="about-us"
         variant="h2"
         textAlign="center"
         sx={{ mb: 4, fontWeight: 'bold' }}

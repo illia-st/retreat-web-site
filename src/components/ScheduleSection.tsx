@@ -61,7 +61,7 @@ const dailySchedule = [
 function ScheduleSection() {
   return (
     <Container sx={{ mb: 4, mt: 4 }}>
-      <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
+      <Typography id="scedule" variant="h2" textAlign="center" sx={{ mb: 4 }}>
         Приклад розкладу нашого дня
       </Typography>
       <Box sx={{ width: '100%', height: '100%' }}>
