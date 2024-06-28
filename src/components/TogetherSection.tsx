@@ -1,25 +1,8 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { Button, Chip, Container, Grid, Typography } from '@mui/material';
+import { Button, Container, Grid, Typography } from '@mui/material';
 import EmblaCarouselSimple from './caruosels/Simple';
 
-const diplomas = [
-  {
-    image: '/retreat-web-site/ch_cert_1.png',
-    maxHeight: 1200,
-    maxWidth: 1000,
-  },
-  {
-    image: '/retreat-web-site/ch_cert_2.PNG',
-    maxHeight: 1200,
-    maxWidth: 1000,
-  },
-  {
-    image: '/retreat-web-site/mt_cert.png',
-    maxHeight: 1200,
-    maxWidth: 1000,
-  },
-];
 const asanas = [
   {
     image: '/retreat-web-site/asana1.jpg',
