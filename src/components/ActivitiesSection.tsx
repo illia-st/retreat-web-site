@@ -14,32 +14,32 @@ import HikeIcon from '@mui/icons-material/Terrain';
 
 const activities = [
   {
-    icon: <BeachAccessIcon />,
+    icon: <BeachAccessIcon htmlColor="#000" />,
     title: 'Похід на пляж',
     description: 'У пішій доступності поряд із віллою є багато пляжів.',
   },
   {
-    icon: <BeachAccessIcon />,
+    icon: <BeachAccessIcon htmlColor="#000" />,
     title: 'Купання в океані',
     description: 'На початку листопада середня температура води 23 °C.',
   },
   {
-    icon: <HikeIcon />,
+    icon: <HikeIcon htmlColor="#000" />,
     title: 'Виїзна екскурсія та хайк до вулкану Тейде',
     description: 'Висота вулкану 3700 м, найвища точка Іспанії.',
   },
   {
-    icon: <HikeIcon />,
+    icon: <HikeIcon htmlColor="#000" />,
     title: '2-3х годинний похід у гори',
     description: 'Поблизу нашого містечка.',
   },
   {
-    icon: <HikeIcon />,
+    icon: <HikeIcon htmlColor="#000" />,
     title: 'Виїзний хайк до ущілини Маска або Національного парку Анага',
     description: 'Неймовірні види та природа.',
   },
   {
-    icon: <LocalActivityIcon />,
+    icon: <LocalActivityIcon htmlColor="#000" />,
     title: 'Знайомство із місцевою культурою та їжею',
     description: 'Спробуйте місцеві страви та дізнайтесь більше про культуру.',
   },

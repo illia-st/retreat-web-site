@@ -46,6 +46,7 @@ function SocialSection() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
+                backgroundColor: 'primary.main',
               }}
             >
               <CardContent>
@@ -62,8 +63,10 @@ function SocialSection() {
                     alt={person.name}
                     sx={{ width: 100, height: 100, mb: 2 }}
                   />
-                  <Typography variant="h6">{person.name}</Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography variant="h6" color="primary.contrastText">
+                    {person.name}
+                  </Typography>
+                  <Typography variant="body2" color="primary.contrastText">
                     {person.role}
                   </Typography>
                   <Link
@@ -78,8 +81,10 @@ function SocialSection() {
                       color: 'inherit',
                     }}
                   >
-                    <InstagramIcon sx={{ mr: 1 }} />
-                    <Typography variant="body1">Follow on Instagram</Typography>
+                    <InstagramIcon htmlColor="#000" sx={{ mr: 1 }} />
+                    <Typography variant="body1" color="primary.contrastText">
+                      Follow on Instagram
+                    </Typography>
                   </Link>
                   <Link
                     href={person.whatsApp ? person.whatsApp : person.telegram}
@@ -94,11 +99,11 @@ function SocialSection() {
                     }}
                   >
                     {person.whatsApp ? (
-                      <WhatsApp sx={{ mr: 1 }} />
+                      <WhatsApp htmlColor="#000" sx={{ mr: 1 }} />
                     ) : (
-                      <Telegram sx={{ mr: 1 }} />
+                      <Telegram htmlColor="#000" sx={{ mr: 1 }} />
                     )}
-                    <Typography variant="body1">
+                    <Typography variant="body1" color="primary.contrastText">
                       Redirect to {person.whatsApp ? 'WhatsApp' : 'Telegram'}
                     </Typography>
                   </Link>
