@@ -7,7 +7,7 @@ import {
   ThemeProvider,
   createTheme,
 } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import LandingPage from './LandingPage';
 import NotFound from './NotFound';
 import Diplomas from './components/Diplomas';
@@ -24,7 +24,25 @@ export function App() {
 }
 
 export function WrappedApp() {
-  const [mode, setMode] = React.useState<PaletteMode>('light');
+  // Get initial mode from localStorage or system preference
+  const getInitialMode = (): PaletteMode => {
+    const savedMode = localStorage.getItem('themeMode');
+    if (savedMode === 'dark' || savedMode === 'light') {
+      return savedMode;
+    }
+    const prefersDarkMode = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches;
+    return prefersDarkMode ? 'dark' : 'light';
+  };
+
+  const [mode, setMode] = React.useState<PaletteMode>(getInitialMode);
+
+  useEffect(() => {
+    // Save mode to localStorage whenever it changes
+    localStorage.setItem('themeMode', mode);
+  }, [mode]);
+
   const defaultTheme = createTheme({
     palette: {
       mode,
@@ -53,3 +71,5 @@ export function WrappedApp() {
     </HashRouter>
   );
 }
+
+export default WrappedApp;
