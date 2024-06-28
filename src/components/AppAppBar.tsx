@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PaletteMode } from '@mui/material';
+import { Link, PaletteMode } from '@mui/material';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -76,13 +76,15 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 px: 0,
               }}
             >
-              <Typography
-                variant="body2"
-                color="text.primary"
-                sx={{ ml: 4, mr: 2, fontWeight: 'bold', fontSize: 20 }}
-              >
-                deepyoga
-              </Typography>
+              <Link href="/" underline="none">
+                <Typography
+                  variant="body2"
+                  color="text.primary"
+                  sx={{ ml: 4, mr: 2, fontWeight: 'bold', fontSize: 20 }}
+                >
+                  deepyoga
+                </Typography>
+              </Link>
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <MenuItem
                   onClick={() => scrollToSection('about-us')}

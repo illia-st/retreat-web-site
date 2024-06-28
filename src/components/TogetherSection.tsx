@@ -1,6 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { Container, Grid, Typography } from '@mui/material';
+import { Button, Chip, Container, Grid, Typography } from '@mui/material';
 import EmblaCarouselSimple from './caruosels/Simple';
 
 const diplomas = [
@@ -65,11 +65,19 @@ function TogetherSection() {
         <Grid item xs={12} sm={4}>
           <EmblaCarouselSimple slides={asanas} options={{}} />
         </Grid>
-        <Grid item xs={12}>
-          <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
-            Наші Дипломи
-          </Typography>
-          <EmblaCarouselSimple slides={diplomas} options={{}} />
+        <Grid
+          item
+          xs={12}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          sx={{ width: '100%' }}
+        >
+          <Button variant="contained" href="/retreat-web-site/#/diplomas">
+            <Typography variant="h2" textAlign="center">
+              Наші Дипломи
+            </Typography>
+          </Button>
         </Grid>
       </Grid>
     </Container>
