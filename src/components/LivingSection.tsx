@@ -120,7 +120,7 @@ function LivingSection() {
         <Grid item xs={12}>
           <Typography
             variant="body1"
-            align="center"
+            align="left"
             sx={{
               whiteSpace: 'pre-line',
               fontSize: '1.1rem',
@@ -139,7 +139,7 @@ function LivingSection() {
           </Typography>
           <Typography
             variant="body1"
-            align="center"
+            align="left"
             sx={{
               whiteSpace: 'pre-line',
               fontSize: '1.1rem',
@@ -151,7 +151,7 @@ function LivingSection() {
           </Typography>
           <Typography
             variant="body1"
-            align="center"
+            align="left"
             sx={{
               whiteSpace: 'pre-line',
               fontSize: '1.1rem',
