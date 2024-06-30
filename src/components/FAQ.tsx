@@ -90,8 +90,8 @@ export default function FAQ() {
                   maxWidth: {
                     sm: '100%',
                     md: '70%',
-                    color: 'primary.contrastText',
                   },
+                  color: 'primary.contrastText',
                 }}
               >
                 {item}
@@ -129,8 +129,8 @@ export default function FAQ() {
                   maxWidth: {
                     sm: '100%',
                     md: '70%',
-                    color: 'primary.contrastText',
                   },
+                  color: 'primary.contrastText',
                 }}
               >
                 {thing}
@@ -166,8 +166,8 @@ export default function FAQ() {
                 maxWidth: {
                   sm: '100%',
                   md: '70%',
-                  color: 'primary.contrastText',
                 },
+                color: 'primary.contrastText',
               }}
             >
               Ми з вами зв&apos;яжемось якомога швидше, щоб уточнити всі деталі
