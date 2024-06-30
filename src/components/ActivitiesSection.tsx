@@ -78,9 +78,13 @@ function ActivitiesSection() {
                 sx={{ backgroundColor: 'primary.main' }}
               >
                 <ListItemIcon>{activity.icon}</ListItemIcon>
-                <Typography variant="h6">{activity.title}</Typography>
+                <Typography variant="h6" sx={{ fontSize: '1.75rem' }}>
+                  {activity.title}
+                </Typography>
               </Box>
-              <Typography variant="body1">{activity.description}</Typography>
+              <Typography variant="body1" sx={{ fontSize: '1.6rem' }}>
+                {activity.description}
+              </Typography>
             </ActivityCard>
           </Grid>
         ))}

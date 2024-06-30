@@ -90,7 +90,11 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   onClick={() => scrollToSection('about-us')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography
+                    variant="body2"
+                    color="text.primary"
+                    sx={{ fontSize: '1.2rem' }}
+                  >
                     Про нас
                   </Typography>
                 </MenuItem>
@@ -98,7 +102,11 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   onClick={() => scrollToSection('together')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography
+                    variant="body2"
+                    color="text.primary"
+                    sx={{ fontSize: '1.2rem' }}
+                  >
                     Чому ми робимо це разом
                   </Typography>
                 </MenuItem>
@@ -106,7 +114,11 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   onClick={() => scrollToSection('live')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography
+                    variant="body2"
+                    color="text.primary"
+                    sx={{ fontSize: '1.2rem' }}
+                  >
                     Де будемо жити
                   </Typography>
                 </MenuItem>
@@ -114,7 +126,11 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   onClick={() => scrollToSection('scedule')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography
+                    variant="body2"
+                    color="text.primary"
+                    sx={{ fontSize: '1.2rem' }}
+                  >
                     Розклад
                   </Typography>
                 </MenuItem>
@@ -122,7 +138,11 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   onClick={() => scrollToSection('activities')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography
+                    variant="body2"
+                    color="text.primary"
+                    sx={{ fontSize: '1.2rem' }}
+                  >
                     Активності
                   </Typography>
                 </MenuItem>
@@ -138,7 +158,11 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   onClick={() => scrollToSection('faq')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography
+                    variant="body2"
+                    color="text.primary"
+                    sx={{ fontSize: '1.2rem' }}
+                  >
                     FAQ
                   </Typography>
                 </MenuItem>

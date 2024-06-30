@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { alpha } from '@mui/material';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import Register from './Register';
 
 export default function GreetingPage() {
   return (
@@ -92,14 +91,14 @@ export default function GreetingPage() {
           <Typography
             textAlign="center"
             color="text.secondary"
-            sx={{ alignSelf: 'center', width: '100%' }}
+            sx={{ alignSelf: 'center', width: '100%', fontSize: '1.6rem' }}
           >
-            Йога ретріт на острові Тенеріфе. Пірни в глибокий океан Йоги разом
-            знами
+            Йога ретрит на острові Тенеріфе. Пірни в глибокий океан Йоги разом з
+            нами
           </Typography>
           <Box
             component="img"
-            src="/retreat-web-site/puerto-de-la-cruz.avif"
+            src="/asana_wide.jpg"
             alt="Yoga Retreat"
             sx={{
               width: '100%',
@@ -109,37 +108,7 @@ export default function GreetingPage() {
               alignSelf: 'center',
             }}
           />
-          <Stack
-            direction={{ xs: 'column', sm: 'row' }}
-            alignSelf="center"
-            spacing={1}
-            useFlexGap
-            sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
-          >
-            <TextField
-              id="outlined-basic"
-              hiddenLabel
-              size="medium"
-              variant="outlined"
-              aria-label="Enter your email address"
-              placeholder="Введіть email"
-              inputProps={{
-                autoComplete: 'off',
-                'aria-label': 'Enter your email address',
-              }}
-            />
-            <Button variant="contained" color="primary">
-              Подати заявку
-            </Button>
-          </Stack>
-          <Typography
-            variant="caption"
-            textAlign="center"
-            sx={{ opacity: 0.8 }}
-          >
-            Натискаючи &quot;Подати заявку&quot; ви погоджуєтесь на подальшу
-            обробку вашої заявки
-          </Typography>
+          <Register />
         </Stack>
       </Container>
     </Box>

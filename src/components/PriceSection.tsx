@@ -18,21 +18,21 @@ const items = [
     title: 'Проживання у 4-місній кімнаті',
     titleWithPrice: 'Проживання у 4-місній кімнаті 1099 € (до 11.07)',
     price: 'Early bird (до 11.07) 1099 €',
-    image: '/retreat-web-site/4place-standart.jpg',
+    image: '/4place-standart.jpg',
   },
   {
     icon: <Looks3Icon />,
     title: 'Проживання у 3-місній кімнаті',
     titleWithPrice: 'Проживання у 3-місній кімнаті 1129 € (до 11.07)',
     price: 'Early bird (до 11.07) 1129 €',
-    image: '/retreat-web-site/3place-standart.jpg',
+    image: '/3place-standart.jpg',
   },
   {
     icon: <LooksTwoIcon />,
     title: 'Проживання у 2-місній кімнаті',
     titleWithPrice: 'Проживання у 2-місній кімнаті 1149 € (до 11.07)',
     price: 'Early bird (до 11.07) 1149 €',
-    image: '/retreat-web-site/2place_standart.jpg',
+    image: '/2place_standart.jpg',
   },
   {
     icon: <Filter2Icon />,
@@ -40,7 +40,7 @@ const items = [
     titleWithPrice:
       'Проживання у покращеній 2-місній кімнаті 1159 € (до 11.07)',
     price: 'Early bird (до 11.07) 1159 €',
-    image: '/retreat-web-site/2place_better.jpg',
+    image: '/2place_better.jpg',
   },
 ];
 
@@ -58,13 +58,19 @@ export default function PriceSection() {
       <Grid container spacing={6}>
         <Grid item xs={12} md={6}>
           <div>
-            <Typography component="h2" variant="h4" color="text.primary">
+            <Typography
+              component="h2"
+              variant="h4"
+              color="text.primary"
+              fontWeight="bold"
+              sx={{ fontSize: '1.75rem' }}
+            >
               Вартість тура
             </Typography>
             <Typography
               variant="body1"
               color="text.secondary"
-              sx={{ mb: { xs: 2, sm: 4 } }}
+              sx={{ mb: { xs: 2, sm: 4 }, fontSize: '1.6rem' }}
             >
               Ось ціни на різні варіанти проживання під час нашого ретриту.
               Оберіть найкращий для вас варіант.
@@ -189,6 +195,7 @@ export default function PriceSection() {
                       color="text.primary"
                       variant="body2"
                       fontWeight="bold"
+                      fontSize="1.6rem"
                     >
                       {title}
                     </Typography>
@@ -196,6 +203,7 @@ export default function PriceSection() {
                       color="text.secondary"
                       variant="body2"
                       sx={{ my: 0.5 }}
+                      fontSize="1.6rem"
                     >
                       {price}
                     </Typography>
@@ -240,9 +248,10 @@ export default function PriceSection() {
               marginBottom: '1rem',
               fontWeight: 'lighter',
             }}
+            fontSize="1rem"
           >
             • Депозит-бронь 300 €, який не повертається (гроші повертаються
-            тільки за умови, якщо ретрит скасовано з нашої боку)
+            тільки за умови, якщо ретрит скасовано з нашого боку)
           </Typography>
           <Typography variant="body1" style={{ fontWeight: 'lighter' }}>
             • Можлива оплата частинами через будь-яку зручну для вас платіжну

@@ -74,6 +74,7 @@ export default function FAQ() {
               component="h3"
               variant="subtitle2"
               sx={{ color: 'primary.contrastText' }}
+              fontSize="1.75rem"
             >
               Які речі із собою брати?
             </Typography>
@@ -83,6 +84,7 @@ export default function FAQ() {
               <Typography
                 key={index}
                 variant="body2"
+                fontSize="1.6rem"
                 gutterBottom
                 sx={{
                   maxWidth: {
@@ -111,6 +113,7 @@ export default function FAQ() {
               component="h3"
               variant="subtitle2"
               sx={{ color: 'primary.contrastText' }}
+              fontSize="1.75rem"
             >
               Що варто знати перед ретритом?
             </Typography>
@@ -120,6 +123,7 @@ export default function FAQ() {
               <Typography
                 key={index}
                 variant="body2"
+                fontSize="1.6rem"
                 gutterBottom
                 sx={{
                   maxWidth: {
@@ -148,6 +152,7 @@ export default function FAQ() {
               component="h3"
               variant="subtitle2"
               sx={{ color: 'primary.contrastText' }}
+              fontSize="1.75rem"
             >
               Що робити після залишення заявки?
             </Typography>
@@ -156,6 +161,7 @@ export default function FAQ() {
             <Typography
               variant="body2"
               gutterBottom
+              fontSize="1.6rem"
               sx={{
                 maxWidth: {
                   sm: '100%',

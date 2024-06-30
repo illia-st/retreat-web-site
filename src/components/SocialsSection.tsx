@@ -20,14 +20,14 @@ const people = [
     role: 'Universal Yoga Teacher RYT 300',
     instagram: 'https://www.instagram.com/oum_victory/',
     whatsApp: 'https://wa.me/798236967',
-    avatar: '/retreat-web-site/soc_mt.png',
+    avatar: '/soc_mt.png',
   },
   {
     name: 'Вікторія Чорножук',
     role: 'Traditional Hatha and Vinyasa Teacher RYT 200',
     instagram: 'https://www.instagram.com/vickydrum/',
     telegram: 'https://t.me/vickydrum',
-    avatar: '/retreat-web-site/soc_ch.png',
+    avatar: '/soc_ch.png',
   },
 ];
 
@@ -63,10 +63,18 @@ function SocialSection() {
                     alt={person.name}
                     sx={{ width: 100, height: 100, mb: 2 }}
                   />
-                  <Typography variant="h6" color="primary.contrastText">
+                  <Typography
+                    variant="h6"
+                    color="primary.contrastText"
+                    fontSize="1.75rem"
+                  >
                     {person.name}
                   </Typography>
-                  <Typography variant="body2" color="primary.contrastText">
+                  <Typography
+                    variant="body2"
+                    color="primary.contrastText"
+                    fontSize="1.6rem"
+                  >
                     {person.role}
                   </Typography>
                   <Link

@@ -37,42 +37,42 @@ const sections = [
     • Професійний контент та фотосесія`,
     images2: [
       {
-        image: '/retreat-web-site/places/IMG_6683.jpg',
+        image: '/places/IMG_6683.jpg',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/retreat-web-site/places/IMG_6684.jpg',
+        image: '/places/IMG_6684.jpg',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/retreat-web-site/places/IMG_6715.jpg',
+        image: '/places/IMG_6715.jpg',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/retreat-web-site/places/IMG_6716.jpg',
+        image: '/places/IMG_6716.jpg',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/retreat-web-site/places/IMG_6802.jpg',
+        image: '/places/IMG_6802.jpg',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/retreat-web-site/places/IMG_7263.PNG',
+        image: '/places/IMG_7263.PNG',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/retreat-web-site/places/iStock-1264675861 RFC.avif',
+        image: '/places/iStock-1264675861 RFC.avif',
         maxHeight: 500,
         maxWidth: 300,
       },
       {
-        image: '/retreat-web-site/places/puerto-de-la-cruz-15.jpeg',
+        image: '/places/puerto-de-la-cruz-15.jpeg',
         maxHeight: 500,
         maxWidth: 300,
       },
@@ -96,7 +96,7 @@ const sections = [
       • Для тих, хто вже знає, що таке чатуранга, і хоче дізнатися більше, на що здатне тіло\n
       • Для тих, хто втомився від осінньої рутини та бажає отримати новий заряд натхнення та енергії\n
       • Для тих, хто хоче зустріти нове коло однодумців\n
-      • Для тих, хто має з мету ввійти в ресурсний стан, у якому хочеться жити і творити\n
+      • Для тих, хто має за мету ввійти в ресурсний стан, у якому хочеться жити і творити\n
       • Та для тих, хто хоче відпочити, побачити нове і подивитися на життя під іншим кутом  
     `,
   },
@@ -129,7 +129,10 @@ function BasicInfo() {
           }}
         >
           <AccordionSummary expandIcon={<ExpandMoreIcon htmlColor="#000" />}>
-            <Typography variant="h6" sx={{ color: 'primary.contrastText' }}>
+            <Typography
+              variant="h6"
+              sx={{ color: 'primary.contrastText', fontSize: '1.75rem' }}
+            >
               {sections[0].title}
             </Typography>
           </AccordionSummary>
@@ -140,7 +143,7 @@ function BasicInfo() {
                   variant="body1"
                   sx={{
                     whiteSpace: 'pre-line',
-                    fontSize: '1.1rem',
+                    fontSize: '1.6rem',
                     lineHeight: 1.6,
                     color: 'primary.contrastText',
                   }}
@@ -163,7 +166,7 @@ function BasicInfo() {
                   variant="body1"
                   sx={{
                     whiteSpace: 'pre-line',
-                    fontSize: '1.1rem',
+                    fontSize: '1.6rem',
                     lineHeight: 1.6,
                     color: 'primary.contrastText',
                   }}
@@ -194,7 +197,10 @@ function BasicInfo() {
             }}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon htmlColor="#000" />}>
-              <Typography variant="h6" sx={{ color: 'primary.contrastText' }}>
+              <Typography
+                variant="h6"
+                sx={{ color: 'primary.contrastText', fontSize: '1.75rem' }}
+              >
                 {section.title}
               </Typography>
             </AccordionSummary>
@@ -203,7 +209,7 @@ function BasicInfo() {
                 variant="body1"
                 sx={{
                   whiteSpace: 'pre-line',
-                  fontSize: '1.1rem',
+                  fontSize: '1.6rem',
                   lineHeight: 1.6,
                   color: 'primary.contrastText',
                 }}

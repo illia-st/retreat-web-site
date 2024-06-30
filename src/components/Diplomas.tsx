@@ -3,17 +3,17 @@ import { Box, Container, Stack, Typography, alpha } from '@mui/material';
 
 const diplomas = [
   {
-    image: '/retreat-web-site/ch_cert_1.png',
+    image: '/ch_cert_1.png',
     maxHeight: 1200,
     maxWidth: 1000,
   },
   {
-    image: '/retreat-web-site/ch_cert_2.PNG',
+    image: '/ch_cert_2.PNG',
     maxHeight: 1200,
     maxWidth: 1000,
   },
   {
-    image: '/retreat-web-site/mt_cert.png',
+    image: '/mt_cert.png',
     maxHeight: 1200,
     maxWidth: 1000,
   },

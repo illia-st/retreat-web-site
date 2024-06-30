@@ -64,12 +64,15 @@ function IncludedSection() {
                     alignItems: 'center',
                     justifyContent: 'left', // Center horizontally
                     textAlign: 'left', // Center text horizontally
+                    fontWeight: '1.9rem',
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: 'auto', mr: 1 }}>
                     <CheckCircleRoundedIcon htmlColor="#000" />
                   </ListItemIcon>
-                  <Typography variant="subtitle1">{item}</Typography>
+                  <Typography variant="subtitle1" fontSize="1.6rem">
+                    {item}
+                  </Typography>
                 </Box>
               </CardContent>
             </Card>
@@ -112,7 +115,9 @@ function NotIncludedSection() {
                   <ListItemIcon sx={{ minWidth: 'auto', mr: 1 }}>
                     <CloseIcon color="error" />
                   </ListItemIcon>
-                  <Typography variant="subtitle1">{item}</Typography>
+                  <Typography variant="subtitle1" fontSize="1.6rem">
+                    {item}
+                  </Typography>
                 </Box>
               </CardContent>
             </Card>

@@ -18,12 +18,12 @@ const teamMembers = [
     `,
     images: [
       {
-        image: '/retreat-web-site/mz1.jpg',
+        image: '/vika_mt_main.JPG',
         maxWidth: 800,
         maxHeight: 1200,
       },
       {
-        image: '/retreat-web-site/mz4.jpg',
+        image: '/mz1.jpg',
         maxWidth: 800,
         maxHeight: 1200,
       },
@@ -41,12 +41,12 @@ const teamMembers = [
     `,
     images: [
       {
-        image: '/retreat-web-site/Chz_Vika2.JPG',
+        image: '/vika_ch_first.jpg',
         maxWidth: 800,
         maxHeight: 1200,
       },
       {
-        image: '/retreat-web-site/vika_asana.jpg',
+        image: '/vika_asana.jpg',
         maxWidth: 800,
         maxHeight: 1200,
       },
@@ -74,14 +74,14 @@ function AboutUs() {
             <Typography
               variant="h4"
               component="h3"
-              sx={{ mb: 2, fontWeight: 'bold', fontSize: '2rem' }}
+              sx={{ mb: 2, fontWeight: 'bold', fontSize: '2.5rem' }}
             >
               {member.name}
             </Typography>
             <Typography
               variant="h6"
               component="h4"
-              sx={{ mb: 2, fontStyle: 'italic', fontSize: '1.25rem' }}
+              sx={{ mb: 2, fontStyle: 'italic', fontSize: '1.75rem' }}
             >
               {member.title}
             </Typography>
@@ -89,7 +89,7 @@ function AboutUs() {
               variant="body1"
               sx={{
                 whiteSpace: 'pre-line',
-                fontSize: '1.1rem',
+                fontSize: '1.6rem',
                 lineHeight: 1.6,
               }}
             >

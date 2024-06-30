@@ -1,16 +1,10 @@
 /* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { Button, Container, Grid, Typography } from '@mui/material';
-import EmblaCarouselSimple from './caruosels/Simple';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
 const asanas = [
   {
-    image: '/retreat-web-site/asana1.jpg',
-    maxHeight: 1000,
-    maxWidth: 600,
-  },
-  {
-    image: '/retreat-web-site/asana2.jpg',
+    image: '/together.jpg',
     maxHeight: 1000,
     maxWidth: 600,
   },
@@ -32,7 +26,7 @@ function TogetherSection() {
             variant="body1"
             sx={{
               whiteSpace: 'pre-line',
-              fontSize: '1.1rem',
+              fontSize: '1.6rem',
               lineHeight: 1.6,
             }}
           >
@@ -45,8 +39,19 @@ function TogetherSection() {
           </Typography>
         </Grid>
         {/* Need to add a cool carousel */}
-        <Grid item xs={12} sm={4}>
-          <EmblaCarouselSimple slides={asanas} options={{}} />
+        <Grid item xs={12} sm={8}>
+          <Box
+            component="img"
+            src={asanas[0].image}
+            alt="Togerher asanas"
+            sx={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              borderRadius: '8px',
+              boxShadow: 3,
+            }}
+          />
         </Grid>
         <Grid
           item
@@ -56,7 +61,7 @@ function TogetherSection() {
           alignItems="center"
           sx={{ width: '100%' }}
         >
-          <Button variant="contained" href="/retreat-web-site/#/diplomas">
+          <Button variant="contained" href="/#/diplomas">
             <Typography variant="h2" textAlign="center">
               Наші Дипломи
             </Typography>

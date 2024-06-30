@@ -4,107 +4,107 @@ import EmblaCarouselSimple from './caruosels/Simple';
 
 const images = [
   {
-    image: '/retreat-web-site/rooms/1.jpg',
+    image: '/rooms/1.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/2.jpg',
+    image: '/rooms/2.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/3.jpg',
+    image: '/rooms/3.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/4.jpg',
+    image: '/rooms/4.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/5.jpg',
+    image: '/rooms/5.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/6.jpg',
+    image: '/rooms/6.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/7.jpg',
+    image: '/rooms/7.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/8.jpg',
+    image: '/rooms/8.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/9.webp',
+    image: '/rooms/9.webp',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/10.jpg',
+    image: '/rooms/10.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/11.jpg',
+    image: '/rooms/11.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/12.jpeg',
+    image: '/rooms/12.jpeg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/13.jpg',
+    image: '/rooms/13.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/14.jpg',
+    image: '/rooms/14.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/15.jpg',
+    image: '/rooms/15.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/16.jpg',
+    image: '/rooms/16.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/17.jpg',
+    image: '/rooms/17.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/18.jpg',
+    image: '/rooms/18.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/19.jpg',
+    image: '/rooms/19.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/20.jpg',
+    image: '/rooms/20.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
   {
-    image: '/retreat-web-site/rooms/21.jpg',
+    image: '/rooms/21.jpg',
     maxHeight: 500,
     maxWidth: 500,
   },
@@ -123,7 +123,7 @@ function LivingSection() {
             align="left"
             sx={{
               whiteSpace: 'pre-line',
-              fontSize: '1.1rem',
+              fontSize: '1.6rem',
               lineHeight: 1.6,
             }}
           >
@@ -131,7 +131,7 @@ function LivingSection() {
             колоніальному стилі посеред бананової плантації розташованої в
             містечку Пуерто-де-ла-Крус на березі Атлантичного океану.
             Неймовірний м’який та теплий клімат Тенерифе, який часто називають
-            “островом вічної весни” надасть нам можливість насолоджуватися
+            “островом вічної весни”, надасть нам можливість насолоджуватися
             практиками у йога шалі на відкритому повітрі або ж на даху з
             приголомшливим видом на океан та місто. У разі опадів (що буває
             рідко), у нас буде можливість займатися в дзеркальному залі на
@@ -142,7 +142,7 @@ function LivingSection() {
             align="left"
             sx={{
               whiteSpace: 'pre-line',
-              fontSize: '1.1rem',
+              fontSize: '1.6rem',
               lineHeight: 1.6,
             }}
           >
@@ -154,7 +154,7 @@ function LivingSection() {
             align="left"
             sx={{
               whiteSpace: 'pre-line',
-              fontSize: '1.1rem',
+              fontSize: '1.6rem',
               lineHeight: 1.6,
             }}
           >
