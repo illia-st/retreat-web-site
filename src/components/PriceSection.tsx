@@ -16,30 +16,30 @@ const items = [
   {
     icon: <Looks4Icon />,
     title: 'Проживання у 4-місній кімнаті',
-    titleWithPrice: 'Проживання у 4-місній кімнаті 1099 € (до 11.07)',
-    price: 'Early bird (до 11.07) 1099 €',
+    titleWithPrice: 'Проживання у 4-місній кімнаті 1099 € (до 31.07)',
+    price: 'Early bird (до 31.07) 1099 €',
     image: '/4place-standart.jpg',
   },
   {
     icon: <Looks3Icon />,
     title: 'Проживання у 3-місній кімнаті',
-    titleWithPrice: 'Проживання у 3-місній кімнаті 1129 € (до 11.07)',
-    price: 'Early bird (до 11.07) 1129 €',
+    titleWithPrice: 'Проживання у 3-місній кімнаті 1129 € (до 31.07)',
+    price: 'Early bird (до 31.07) 1129 €',
     image: '/3place-standart.jpg',
   },
   {
     icon: <LooksTwoIcon />,
     title: 'Проживання у 2-місній кімнаті',
-    titleWithPrice: 'Проживання у 2-місній кімнаті 1149 € (до 11.07)',
-    price: 'Early bird (до 11.07) 1149 €',
+    titleWithPrice: 'Проживання у 2-місній кімнаті 1149 € (до 31.07)',
+    price: 'Early bird (до 31.07) 1149 €',
     image: '/2place_standart.jpg',
   },
   {
     icon: <Filter2Icon />,
     title: 'Проживання у покращеній 2-місній кімнаті',
     titleWithPrice:
-      'Проживання у покращеній 2-місній кімнаті 1159 € (до 11.07)',
-    price: 'Early bird (до 11.07) 1159 €',
+      'Проживання у покращеній 2-місній кімнаті 1159 € (до 31.07)',
+    price: 'Early bird (до 31.07) 1159 €',
     image: '/2place_better.jpg',
   },
 ];
