@@ -11,6 +11,7 @@ import LandingPage from './LandingPage';
 import NotFound from './NotFound';
 import Diplomas from './components/Diplomas';
 import AppAppBar from './components/AppAppBar';
+import CustomSpeedDial from './components/Dial';
 
 export function App() {
   return (
@@ -69,6 +70,7 @@ export function WrappedApp() {
         <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
         <Box sx={{ bgcolor: 'background.default' }}>
           <App />
+          <CustomSpeedDial />
         </Box>
       </ThemeProvider>
     </HashRouter>
