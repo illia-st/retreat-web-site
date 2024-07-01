@@ -89,7 +89,7 @@ function SocialSection() {
                       color: 'inherit',
                     }}
                   >
-                    <InstagramIcon htmlColor="#000" sx={{ mr: 1 }} />
+                    <InstagramIcon sx={{ mr: 1 }} />
                     <Typography variant="body1" color="primary.contrastText">
                       Follow on Instagram
                     </Typography>
@@ -107,9 +107,9 @@ function SocialSection() {
                     }}
                   >
                     {person.whatsApp ? (
-                      <WhatsApp htmlColor="#000" sx={{ mr: 1 }} />
+                      <WhatsApp sx={{ mr: 1 }} />
                     ) : (
-                      <Telegram htmlColor="#000" sx={{ mr: 1 }} />
+                      <Telegram sx={{ mr: 1 }} />
                     )}
                     <Typography variant="body1" color="primary.contrastText">
                       Redirect to {person.whatsApp ? 'WhatsApp' : 'Telegram'}

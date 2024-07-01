@@ -43,7 +43,8 @@ export function WrappedApp() {
     localStorage.setItem('themeMode', mode);
   }, [mode]);
 
-  const defaultTheme = createTheme({
+  // Light mode theme
+  const lightTheme = createTheme({
     palette: {
       mode: 'light',
       primary: {
@@ -59,13 +60,31 @@ export function WrappedApp() {
     },
   });
 
+  // Dark mode theme
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+      primary: {
+        light: '#aaa866',
+        main: '#949146',
+        dark: '#706e3e',
+        contrastText: '#fff',
+      },
+      background: {
+        paper: '#333',
+        default: '#121212',
+      },
+    },
+  });
+  const theme = mode === 'light' ? lightTheme : darkTheme;
+
   const toggleColorMode = () => {
     setMode((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
   return (
     <HashRouter>
-      <ThemeProvider theme={defaultTheme}>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
         <Box sx={{ bgcolor: 'background.default' }}>

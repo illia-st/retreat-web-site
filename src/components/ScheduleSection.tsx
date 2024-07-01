@@ -89,7 +89,6 @@ function ScheduleSection() {
             disableToolbar
             disableNavOnKey
             disableInteraction
-            enableDarkToggle
             scrollable
             enableBreakPoint
             verticalBreakPoint={400}
@@ -97,10 +96,9 @@ function ScheduleSection() {
             mode="VERTICAL_ALTERNATING"
             theme={{
               primary: theme.palette.primary.main,
-              secondary: theme.palette.primary.contrastText,
               titleColor: theme.palette.primary.main,
-              cardBgColor: theme.palette.background.default,
-              cardTitleColor: theme.palette.primary.contrastText,
+              cardBgColor: '#f0e6d5',
+              cardTitleColor: '#000',
             }}
             fontSizes={{
               cardSubtitle: '1.5rem',

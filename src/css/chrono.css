@@ -1,9 +1,4 @@
 /* styles.css */
-.my-card {
-    stroke: none !important;
-    stroke-width: 0 !important;
-}
-
 .chrono-card-title {
     font-weight: normal !important;
 }

@@ -68,7 +68,7 @@ function IncludedSection() {
                   }}
                 >
                   <ListItemIcon sx={{ minWidth: 'auto', mr: 1 }}>
-                    <CheckCircleRoundedIcon htmlColor="#000" />
+                    <CheckCircleRoundedIcon />
                   </ListItemIcon>
                   <Typography variant="subtitle1" fontSize="1.6rem">
                     {item}

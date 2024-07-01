@@ -128,7 +128,7 @@ function BasicInfo() {
             backgroundColor: 'primary.main',
           }}
         >
-          <AccordionSummary expandIcon={<ExpandMoreIcon htmlColor="#000" />}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Typography
               variant="h6"
               sx={{ color: 'primary.contrastText', fontSize: '1.75rem' }}
@@ -196,7 +196,7 @@ function BasicInfo() {
               backgroundColor: 'primary.main',
             }}
           >
-            <AccordionSummary expandIcon={<ExpandMoreIcon htmlColor="#000" />}>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <Typography
                 variant="h6"
                 sx={{ color: 'primary.contrastText', fontSize: '1.75rem' }}

@@ -65,7 +65,7 @@ export default function FAQ() {
           sx={{ backgroundColor: 'primary.main' }}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon htmlColor="#000" />}
+            expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1d-content"
             id="panel1d-header"
             sx={{ color: 'primary.contrastText' }}
@@ -105,7 +105,7 @@ export default function FAQ() {
           sx={{ backgroundColor: 'primary.main' }}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon htmlColor="#000" />}
+            expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2d-content"
             id="panel2d-header"
           >
@@ -144,7 +144,7 @@ export default function FAQ() {
           sx={{ backgroundColor: 'primary.main' }}
         >
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon htmlColor="#000" />}
+            expandIcon={<ExpandMoreIcon />}
             aria-controls="panel3d-content"
             id="panel3d-header"
           >
