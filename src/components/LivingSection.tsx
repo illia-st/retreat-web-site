@@ -4,6 +4,11 @@ import EmblaCarouselSimple from './caruosels/Simple';
 
 const images = [
   {
+    image: '/rooms/the_first.PNG',
+    maxHeight: 500,
+    maxWidth: 500,
+  },
+  {
     image: '/rooms/1.jpg',
     maxHeight: 500,
     maxWidth: 500,

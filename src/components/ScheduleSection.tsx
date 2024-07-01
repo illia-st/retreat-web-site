@@ -77,11 +77,18 @@ function ScheduleSection() {
           sx={{
             width: '100%',
             height: '100%',
+            pointerEvents: 'none',
           }}
         >
           <Chrono
+            borderLessCards
+            cardHeight={100}
+            disableTimelinePoint
+            disableClickOnCircle
             disableToolbar
             disableNavOnKey
+            disableInteraction
+            enableDarkToggle
             scrollable
             enableBreakPoint
             verticalBreakPoint={400}
@@ -89,9 +96,13 @@ function ScheduleSection() {
             mode="VERTICAL_ALTERNATING"
             theme={{
               primary: theme.palette.primary.main,
+              secondary: theme.palette.primary.contrastText,
+              titleColor: theme.palette.primary.main,
+              cardBgColor: theme.palette.primary.light,
+              cardTitleColor: theme.palette.primary.contrastText,
             }}
             fontSizes={{
-              cardSubtitle: '1.6rem',
+              cardSubtitle: '1.5rem',
               cardTitle: '1.75rem',
               title: '2rem',
             }}

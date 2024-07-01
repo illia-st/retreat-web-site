@@ -4,7 +4,7 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material';
 
 const asanas = [
   {
-    image: '/together.jpg',
+    image: '/together_asana.PNG',
     maxHeight: 1000,
     maxWidth: 600,
   },
@@ -62,8 +62,12 @@ function TogetherSection() {
           sx={{ width: '100%' }}
         >
           <Button variant="contained" href="/#/diplomas">
-            <Typography variant="h2" textAlign="center">
-              Наші Дипломи
+            <Typography
+              variant="h2"
+              textAlign="center"
+              sx={{ textTransform: 'none' }}
+            >
+              Наші дипломи
             </Typography>
           </Button>
         </Grid>

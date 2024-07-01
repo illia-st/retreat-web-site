@@ -1,5 +1,4 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import { lightBlue } from '@mui/material/colors';
 import {
   Box,
   CssBaseline,
@@ -45,12 +44,16 @@ export function WrappedApp() {
 
   const defaultTheme = createTheme({
     palette: {
-      mode,
+      mode: 'light',
       primary: {
-        light: lightBlue[50],
-        main: lightBlue[100],
-        dark: lightBlue[200],
+        light: '#aaa866',
+        main: '#949146',
+        dark: '#706e3e',
         contrastText: '#000',
+      },
+      background: {
+        paper: '#f0e6d5',
+        default: '#f0e6d5',
       },
     },
   });

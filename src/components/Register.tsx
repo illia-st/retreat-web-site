@@ -3,6 +3,7 @@ import React from 'react';
 import { Button, Typography, Stack, Container } from '@mui/material';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { orange } from '@mui/material/colors';
 
 const validationSchema = Yup.object({
   email: Yup.string()
@@ -50,12 +51,13 @@ function Register() {
           <Button
             type="submit"
             variant="contained"
-            color="primary"
             href={actionUrl}
             sx={{
               height: '100px',
               width: '250px',
               fontSize: '1.6rem',
+              backgroundColor: orange[300],
+              textTransform: 'none',
             }}
           >
             Подати заявку

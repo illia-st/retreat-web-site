@@ -14,8 +14,8 @@ export default function GreetingPage() {
         width: '100%',
         backgroundImage:
           theme.palette.mode === 'light'
-            ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
-            : `linear-gradient(#02294F, ${alpha('#090E10', 0.0)})`,
+            ? 'linear-gradient(180deg, #b3e5fc, #f0e6d5)'
+            : `linear-gradient(#02294F, ${alpha('#f0e6d5', 0.0)})`,
         backgroundSize: '100% 20%',
         backgroundRepeat: 'no-repeat',
       })}
@@ -46,10 +46,11 @@ export default function GreetingPage() {
               variant="h1"
               sx={{
                 fontSize: 'clamp(3rem, 10vw, 4rem)',
-                color: (theme) =>
-                  theme.palette.mode === 'light'
-                    ? 'primary.main'
-                    : 'primary.light',
+                color: 'primary.dark',
+                // color: (theme) =>
+                //   theme.palette.mode === 'light'
+                //     ? 'primary.dark'
+                //     : 'primary.light',
               }}
             >
               Yoga Retreat
