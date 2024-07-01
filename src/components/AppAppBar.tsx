@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as React from 'react';
 import { Link, PaletteMode } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -172,7 +173,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 </MenuItem>
               </Box>
             </Box>
-            <Box
+            {/* <Box
               sx={{
                 display: { xs: 'none', md: 'flex' },
                 gap: 0.5,
@@ -180,7 +181,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
               }}
             >
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
-            </Box>
+            </Box> */}
             <Box sx={{ display: { sm: '', md: 'none' } }}>
               <Button
                 variant="text"
@@ -200,7 +201,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     flexGrow: 1,
                   }}
                 >
-                  <Box
+                  {/* <Box
                     sx={{
                       display: 'flex',
                       flexDirection: 'column',
@@ -212,7 +213,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                       mode={mode}
                       toggleColorMode={toggleColorMode}
                     />
-                  </Box>
+                  </Box> */}
                   <MenuItem onClick={() => scrollToSection('about-us')}>
                     Про нас
                   </MenuItem>
