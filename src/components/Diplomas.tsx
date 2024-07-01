@@ -50,6 +50,9 @@ function Diplomas() {
             <Box
               key={index}
               component="img"
+              loading="lazy"
+              decoding="async"
+              fetchPriority="high"
               src={image}
               alt={`Image ${index + 1}`}
               sx={{

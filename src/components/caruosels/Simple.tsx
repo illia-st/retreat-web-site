@@ -37,6 +37,9 @@ const EmblaCarouselSimple: React.FC<PropType> = (props) => {
               key={index}
             >
               <img
+                loading="lazy"
+                decoding="async"
+                fetchPriority="high"
                 className="embla__slide__img"
                 src={slide.image}
                 alt="Your alt text"

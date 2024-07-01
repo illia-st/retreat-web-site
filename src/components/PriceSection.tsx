@@ -120,6 +120,9 @@ export default function PriceSection() {
           >
             <Box
               component="img"
+              loading="lazy"
+              decoding="async"
+              fetchPriority="high"
               src={selectedFeature.image}
               alt={`section image ${selectedFeature.title}`}
               sx={{

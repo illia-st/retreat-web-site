@@ -42,6 +42,9 @@ function TogetherSection() {
         <Grid item xs={12} sm={8}>
           <Box
             component="img"
+            loading="lazy"
+            decoding="async"
+            fetchPriority="high"
             src={asanas[0].image}
             alt="Togerher asanas"
             sx={{

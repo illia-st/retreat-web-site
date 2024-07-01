@@ -38,6 +38,9 @@ const EmblaCarouselAutoHeight: React.FC<PropType> = (props) => {
               key={index}
             >
               <img
+                loading="lazy"
+                decoding="async"
+                fetchPriority="high"
                 className="embla__slide__img__auto__height"
                 src={slide.image}
                 alt="Your alt text"
