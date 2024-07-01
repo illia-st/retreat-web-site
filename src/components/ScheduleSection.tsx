@@ -1,6 +1,7 @@
 import React from 'react';
 import { Chrono } from 'react-chrono';
 import { Box, Container, Typography, useTheme } from '@mui/material';
+import '../css/chrono.css';
 
 const dailySchedule = [
   {
@@ -98,13 +99,22 @@ function ScheduleSection() {
               primary: theme.palette.primary.main,
               secondary: theme.palette.primary.contrastText,
               titleColor: theme.palette.primary.main,
-              cardBgColor: theme.palette.primary.light,
+              cardBgColor: theme.palette.background.default,
               cardTitleColor: theme.palette.primary.contrastText,
             }}
             fontSizes={{
               cardSubtitle: '1.5rem',
               cardTitle: '1.75rem',
               title: '2rem',
+            }}
+            classNames={{
+              card: 'my-card',
+              cardMedia: 'my-card-media',
+              cardSubTitle: 'chrono-card-title',
+              cardText: 'my-card-text',
+              cardTitle: 'chrono-card-title',
+              controls: 'my-controls',
+              title: 'my-title',
             }}
           />
         </Box>

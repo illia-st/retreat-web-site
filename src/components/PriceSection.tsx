@@ -105,6 +105,7 @@ export default function PriceSection() {
                     selectedItemIndex === index ? 'primary.main' : '',
                   '& .MuiChip-label': {
                     color: selectedItemIndex === index ? '#000' : '',
+                    fontSize: '1rem',
                   },
                 }}
               />
