@@ -150,7 +150,11 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   onClick={() => scrollToSection('price')}
                   sx={{ py: '6px', px: '12px' }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography
+                    variant="body2"
+                    color="text.primary"
+                    sx={{ fontSize: '1.2rem' }}
+                  >
                     Ціни
                   </Typography>
                 </MenuItem>
