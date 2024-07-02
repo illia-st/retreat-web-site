@@ -89,6 +89,7 @@ export default function PriceSection() {
                 onClick={() => handleItemClick(index)}
                 sx={{
                   textTransform: 'none',
+                  borderRadius: '15px',
                   borderColor: (theme) => {
                     if (theme.palette.mode === 'light') {
                       return selectedItemIndex === index
