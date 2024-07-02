@@ -2,7 +2,6 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
-import Chip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
@@ -83,32 +82,44 @@ export default function PriceSection() {
             sx={{ display: { xs: 'auto', sm: 'none' } }}
           >
             {items.map(({ titleWithPrice }, index) => (
-              <Chip
+              <Button
                 // eslint-disable-next-line react/no-array-index-key
                 key={index}
-                label={titleWithPrice}
+                variant={selectedItemIndex === index ? 'contained' : 'outlined'}
                 onClick={() => handleItemClick(index)}
                 sx={{
+                  textTransform: 'none',
                   borderColor: (theme) => {
                     if (theme.palette.mode === 'light') {
-                      return selectedItemIndex === index ? 'primary.light' : '';
+                      return selectedItemIndex === index
+                        ? theme.palette.primary.dark
+                        : '';
                     }
-                    return selectedItemIndex === index ? 'primary.light' : '';
+                    return selectedItemIndex === index
+                      ? theme.palette.primary.dark
+                      : '';
                   },
-                  background: (theme) => {
+                  backgroundColor: (theme) => {
                     if (theme.palette.mode === 'light') {
-                      return selectedItemIndex === index ? 'none' : '';
+                      return selectedItemIndex === index
+                        ? theme.palette.primary.main
+                        : '';
                     }
-                    return selectedItemIndex === index ? 'none' : '';
+                    return selectedItemIndex === index
+                      ? theme.palette.primary.main
+                      : '';
                   },
-                  backgroundColor:
-                    selectedItemIndex === index ? 'primary.main' : '',
-                  '& .MuiChip-label': {
-                    color: selectedItemIndex === index ? '#000' : '',
+                  '& .MuiButton-label': {
+                    color: (theme) =>
+                      selectedItemIndex === index
+                        ? theme.palette.primary.contrastText
+                        : '',
                     fontSize: '1rem',
                   },
                 }}
-              />
+              >
+                {titleWithPrice}
+              </Button>
             ))}
           </Grid>
           <Box
@@ -159,11 +170,11 @@ export default function PriceSection() {
                   borderColor: (theme) => {
                     if (theme.palette.mode === 'light') {
                       return selectedItemIndex === index
-                        ? 'primary.light'
+                        ? theme.palette.primary.light
                         : 'grey.200';
                     }
                     return selectedItemIndex === index
-                      ? 'primary.dark'
+                      ? theme.palette.primary.dark
                       : 'grey.800';
                   },
                 }}
@@ -183,11 +194,11 @@ export default function PriceSection() {
                       color: (theme) => {
                         if (theme.palette.mode === 'light') {
                           return selectedItemIndex === index
-                            ? 'primary.main'
+                            ? theme.palette.primary.main
                             : 'grey.300';
                         }
                         return selectedItemIndex === index
-                          ? 'primary.main'
+                          ? theme.palette.primary.main
                           : 'grey.700';
                       },
                     }}
