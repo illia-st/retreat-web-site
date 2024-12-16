@@ -1,0 +1,13 @@
+{
+    "welcome": "Welcome to our website!",
+    "greeting": "Hello, Illia!",
+    "appBar": {
+        "aboutUs": "About us",
+        "whyWeDoThisTogether": "Why we do this together",
+        "whereDoWeLive": "Where will we live",
+        "schedule": "Schedule",
+        "activities": "Activities",
+        "price": "Price"
+    }
+}
+  

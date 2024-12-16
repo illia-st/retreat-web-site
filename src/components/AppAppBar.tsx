@@ -10,7 +10,9 @@ import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useTranslation } from 'react-i18next';
 import ToggleColorMode from './ToggleColorMode';
+import LanguageSwitcher from './LanguageSwitcher';
 
 interface AppAppBarProps {
   mode: PaletteMode;
@@ -19,6 +21,8 @@ interface AppAppBarProps {
 
 function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
   const [open, setOpen] = React.useState(false);
+
+  const { t } = useTranslation();
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
@@ -96,7 +100,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     color="text.primary"
                     sx={{ fontSize: '1.2rem' }}
                   >
-                    Про нас
+                    {t('appBar.aboutUs')}
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -108,7 +112,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     color="text.primary"
                     sx={{ fontSize: '1.2rem' }}
                   >
-                    Чому ми робимо це разом
+                    {t('appBar.whyWeDoThisTogether')}
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -120,7 +124,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     color="text.primary"
                     sx={{ fontSize: '1.2rem' }}
                   >
-                    Де будемо жити
+                    {t('appBar.whereDoWeLive')}
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -132,7 +136,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     color="text.primary"
                     sx={{ fontSize: '1.2rem' }}
                   >
-                    Розклад
+                    {t('appBar.schedule')}
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -144,7 +148,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     color="text.primary"
                     sx={{ fontSize: '1.2rem' }}
                   >
-                    Активності
+                    {t('appBar.activities')}
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -156,7 +160,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                     color="text.primary"
                     sx={{ fontSize: '1.2rem' }}
                   >
-                    Ціни
+                    {t('appBar.price')}
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -180,6 +184,7 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 alignItems: 'center',
               }}
             >
+              <LanguageSwitcher />
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
             </Box>
             <Box sx={{ display: { sm: '', md: 'none' } }}>
@@ -204,33 +209,35 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                   <Box
                     sx={{
                       display: 'flex',
-                      flexDirection: 'column',
+                      flexDirection: 'row',
                       alignItems: 'end',
+                      justifyContent: 'end',
                       flexGrow: 1,
                     }}
                   >
+                    <LanguageSwitcher />
                     <ToggleColorMode
                       mode={mode}
                       toggleColorMode={toggleColorMode}
                     />
                   </Box>
                   <MenuItem onClick={() => scrollToSection('about-us')}>
-                    Про нас
+                    {t('appBar.aboutUs')}
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('together')}>
-                    Чому ми робимо це разом
+                    {t('appBar.whyWeDoThisTogether')}
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('live')}>
-                    Де будемо жити
+                    {t('appBar.whereDoWeLive')}
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('scedule')}>
-                    Розклад
+                    {t('appBar.schedule')}
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('activities')}>
-                    Активності
+                    {t('appBar.activities')}
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('price')}>
-                    Ціни
+                    {t('appBar.price')}
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('faq')}>
                     FAQ

@@ -1,0 +1,13 @@
+{
+    "welcome": "Ласкаво просимо на наш сайт!",
+    "greeting": "Привіт, Ілля!",
+    "appBar": {
+        "aboutUs": "Про нас",
+        "whyWeDoThisTogether": "Чому ми робимо це разом",
+        "whereDoWeLive": "Де будемо жити",
+        "schedule": "Розклад",
+        "activities": "Активності",
+        "price": "Ціни"
+    }
+}
+  

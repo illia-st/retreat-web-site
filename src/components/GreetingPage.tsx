@@ -4,9 +4,12 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { useTranslation } from 'react-i18next';
 import Register from './Register';
 
 export default function GreetingPage() {
+  const { t } = useTranslation();
+
   return (
     <Box
       id="hero"
@@ -47,10 +50,6 @@ export default function GreetingPage() {
               sx={{
                 fontSize: 'clamp(3rem, 10vw, 4rem)',
                 color: 'primary.dark',
-                // color: (theme) =>
-                //   theme.palette.mode === 'light'
-                //     ? 'primary.dark'
-                //     : 'primary.light',
               }}
             >
               Yoga Retreat
