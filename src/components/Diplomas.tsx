@@ -1,5 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import { Box, Container, Stack, Typography, alpha } from '@mui/material';
+import { useEffect } from 'react';
+import AppInterface from '../interfaces/AppInterface';
 
 const diplomas = [
   {
@@ -19,7 +21,12 @@ const diplomas = [
   },
 ];
 
-function Diplomas() {
+interface DiplomasInterface extends AppInterface {}
+
+function Diplomas({ setAppBarItemsCallback }: DiplomasInterface) {
+  useEffect(() => {
+    setAppBarItemsCallback([]);
+  }, [setAppBarItemsCallback]);
   return (
     <Box
       id="hero"
@@ -43,7 +50,7 @@ function Diplomas() {
         }}
       >
         <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
-          Наші Дипломи
+          Our diplomas
         </Typography>
         <Stack direction="column">
           {diplomas.map(({ image }, index) => (

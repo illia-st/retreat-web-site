@@ -12,12 +12,18 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from './ToggleColorMode';
 
+export interface CustomMenuItemProps {
+  id: string;
+  label: string;
+}
+
 interface AppAppBarProps {
   mode: PaletteMode;
   toggleColorMode: () => void;
+  menuItems: CustomMenuItemProps[];
 }
 
-function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
+function AppAppBar({ mode, toggleColorMode, menuItems }: AppAppBarProps) {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -87,90 +93,21 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                 </Typography>
               </Link>
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <MenuItem
-                  onClick={() => scrollToSection('about-us')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography
-                    variant="body2"
-                    color="text.primary"
-                    sx={{ fontSize: '1.2rem' }}
+                {menuItems.map((item) => (
+                  <MenuItem
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    sx={{ py: '6px', px: '12px' }}
                   >
-                    Про нас
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('together')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography
-                    variant="body2"
-                    color="text.primary"
-                    sx={{ fontSize: '1.2rem' }}
-                  >
-                    Чому ми робимо це разом
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('live')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography
-                    variant="body2"
-                    color="text.primary"
-                    sx={{ fontSize: '1.2rem' }}
-                  >
-                    Де будемо жити
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('scedule')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography
-                    variant="body2"
-                    color="text.primary"
-                    sx={{ fontSize: '1.2rem' }}
-                  >
-                    Розклад
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('activities')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography
-                    variant="body2"
-                    color="text.primary"
-                    sx={{ fontSize: '1.2rem' }}
-                  >
-                    Активності
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('price')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography
-                    variant="body2"
-                    color="text.primary"
-                    sx={{ fontSize: '1.2rem' }}
-                  >
-                    Ціни
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('faq')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography
-                    variant="body2"
-                    color="text.primary"
-                    sx={{ fontSize: '1.2rem' }}
-                  >
-                    FAQ
-                  </Typography>
-                </MenuItem>
+                    <Typography
+                      variant="body2"
+                      color="text.primary"
+                      sx={{ fontSize: '1.2rem' }}
+                    >
+                      {item.label}
+                    </Typography>
+                  </MenuItem>
+                ))}
               </Box>
             </Box>
             <Box
@@ -214,27 +151,14 @@ function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
                       toggleColorMode={toggleColorMode}
                     />
                   </Box>
-                  <MenuItem onClick={() => scrollToSection('about-us')}>
-                    Про нас
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('together')}>
-                    Чому ми робимо це разом
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('live')}>
-                    Де будемо жити
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('scedule')}>
-                    Розклад
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('activities')}>
-                    Активності
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('price')}>
-                    Ціни
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('faq')}>
-                    FAQ
-                  </MenuItem>
+                  {menuItems.map((item) => (
+                    <MenuItem
+                      key={item.id}
+                      onClick={() => scrollToSection(item.id)}
+                    >
+                      {item.label}
+                    </MenuItem>
+                  ))}
                 </Box>
               </Drawer>
             </Box>

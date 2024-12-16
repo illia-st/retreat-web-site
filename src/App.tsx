@@ -6,23 +6,40 @@ import {
   ThemeProvider,
   createTheme,
 } from '@mui/material';
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import NotFound from './NotFound';
 import Diplomas from './components/Diplomas';
-import AppAppBar from './components/AppAppBar';
+import AppAppBar, { CustomMenuItemProps } from './components/AppAppBar';
 import CustomSpeedDial from './components/Dial';
 
 import RootPage from './pages/RootPage';
 import Port2025Retreat from './pages/retreats/Port2025';
 import Swiss2025Retreat from './pages/retreats/Swiss2025';
+import AppInterface from './interfaces/AppInterface';
 
-export function App() {
+export function App({ setAppBarItemsCallback }: AppInterface) {
   return (
     <Routes>
-      <Route path="/" element={<RootPage />} />
-      <Route path="/swiss-2025" element={<Swiss2025Retreat />} />
-      <Route path="/port-2025" element={<Port2025Retreat />} />
-      <Route path="/diplomas" element={<Diplomas />} />
+      <Route
+        path="/"
+        element={<RootPage setAppBarItemsCallback={setAppBarItemsCallback} />}
+      />
+      <Route
+        path="/swiss-2025"
+        element={
+          <Swiss2025Retreat setAppBarItemsCallback={setAppBarItemsCallback} />
+        }
+      />
+      <Route
+        path="/port-2025"
+        element={
+          <Port2025Retreat setAppBarItemsCallback={setAppBarItemsCallback} />
+        }
+      />
+      <Route
+        path="/diplomas"
+        element={<Diplomas setAppBarItemsCallback={setAppBarItemsCallback} />}
+      />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
@@ -41,7 +58,13 @@ export function WrappedApp() {
     return prefersDarkMode ? 'dark' : 'light';
   };
 
-  const [mode, setMode] = React.useState<PaletteMode>(getInitialMode);
+  const [mode, setMode] = useState<PaletteMode>(getInitialMode);
+
+  const [appBarItems, setAppBarItems] = useState<CustomMenuItemProps[]>([]);
+
+  const setAppBarItemsCallback = useCallback((items: CustomMenuItemProps[]) => {
+    setAppBarItems(items);
+  }, []);
 
   useEffect(() => {
     // Save mode to localStorage whenever it changes
@@ -91,9 +114,13 @@ export function WrappedApp() {
     <HashRouter>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <AppAppBar mode={mode} toggleColorMode={toggleColorMode} />
+        <AppAppBar
+          menuItems={appBarItems}
+          mode={mode}
+          toggleColorMode={toggleColorMode}
+        />
         <Box sx={{ bgcolor: 'background.default' }}>
-          <App />
+          <App setAppBarItemsCallback={setAppBarItemsCallback} />
           <CustomSpeedDial />
         </Box>
       </ThemeProvider>

@@ -16,19 +16,19 @@ const retreats = [
   {
     title: 'Waltensburg/Vuorz, Graubünden, Switzerland',
     date: '21-23 March 2025',
-    image: '/swiss2025/aussen-2.jpg', // Replace with actual image URL
+    image: '/public/swiss2025/aussen-2.jpg', // Replace with actual image URL
     link: '/#/diplomas',
   },
   {
     title: 'Portugal Late Spring 2025',
     date: 'Spring 2025',
-    image: '/swiss2025/winter-hotel-with-sky.jpg', // Replace with actual image URL
+    image: '/public/swiss2025/winter-hotel-with-sky.jpg', // Replace with actual image URL
     link: '/#/diplomas',
   },
   {
     title: 'Tenerife, Canary Islands, Spain',
     date: 'Late Autumn 2025',
-    image: 'public/swiss2025/hotel-summer-garden.jpg', // Replace with actual image URL
+    image: '/public/swiss2025/hotel-summer-garden.jpg', // Replace with actual image URL
     link: '/#/diplomas',
   },
 ];
@@ -45,7 +45,7 @@ export default function AvailableRetreats() {
   const isLg = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
-    <Box sx={{ my: 5 }}>
+    <Box id="retreats" sx={{ my: 5 }}>
       <Typography variant="h4" align="center" gutterBottom>
         Our Next Retreats in 2025
       </Typography>

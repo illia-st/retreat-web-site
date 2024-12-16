@@ -1,31 +1,36 @@
 import Divider from '@mui/material/Divider';
+import { useEffect } from 'react';
 import GreetingPage from '../components/GreetingPage';
-// import PriceSection from '../components/PriceSection';
-// import FAQ from '../components/FAQ';
 import BasicInfo from '../components/BasicInfo';
 import AboutUs from '../components/AboutUs';
 import TogetherSection from '../components/TogetherSection';
-// import LivingSection from '../components/LivingSection';
-// import ScheduleSection from '../components/ScheduleSection';
-// import ActivitiesSection from '../components/ActivitiesSection';
-// import Included from '../components/Included';
-// import Register from '../components/Register';
 import SocialSection from '../components/SocialsSection';
 import AvailableRetreats from './AvailableRetreats';
+import AppInterface from '../interfaces/AppInterface';
 
-export default function RootPage() {
+interface RootPageIterface extends AppInterface {}
+
+export default function RootPage({ setAppBarItemsCallback }: RootPageIterface) {
+  useEffect(() => {
+    setAppBarItemsCallback([
+      { id: 'greeting', label: 'Greeting' },
+      { id: 'retreats', label: 'Available Retreats' },
+      { id: 'basic-info', label: 'Basic Info' },
+      { id: 'about-us', label: 'About Us' },
+      { id: 'socials', label: 'Social Networks' },
+    ]);
+  }, [setAppBarItemsCallback]);
   return (
     <>
       <GreetingPage />
       <Divider />
       <AvailableRetreats />
+      <Divider />
       <BasicInfo />
       <Divider />
       <AboutUs />
       <Divider />
       <TogetherSection />
-      {/* <Divider />
-      <FAQ /> Probably here is a need to update FAQ */}
       <Divider />
       <SocialSection />
     </>

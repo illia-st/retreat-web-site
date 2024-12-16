@@ -21,14 +21,14 @@ const scrollToSection = (sectionId: string) => {
 const actions = [
   {
     icon: <BookmarkIcon />,
-    name: 'Забронювати',
+    name: 'Book',
     link: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSerfZCssscf0k4jA095ktFr4_O8cXj7OBiLtZOIVK7pkhpP7g/formResponse',
   },
   {
     icon: <QuestionAnswerIcon />,
-    name: 'Задати запитання',
+    name: 'Ask a question',
     onClick: () => {
-      scrollToSection('social-section'); // Link to the SocialSection component
+      scrollToSection('social-section');
     },
   },
 ];

@@ -33,7 +33,7 @@ const people = [
 
 function SocialSection() {
   return (
-    <Container id="social-section" sx={{ mt: 4, mb: 10 }}>
+    <Container id="socials" sx={{ mt: 4, mb: 10 }}>
       <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
         Our social networks
       </Typography>

@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 export default function GreetingPage() {
   return (
     <Box
-      id="hero"
+      id="greeting"
       sx={(theme) => ({
         width: '100%',
         backgroundImage:

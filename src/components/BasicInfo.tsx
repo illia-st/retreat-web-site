@@ -105,7 +105,7 @@ const sections = [
 function BasicInfo() {
   return (
     <Box
-      id="hero"
+      id="basic-info"
       sx={{
         width: '100%',
         mt: 4,
