@@ -7,16 +7,21 @@ import {
   createTheme,
 } from '@mui/material';
 import React, { useEffect } from 'react';
-import LandingPage from './LandingPage';
 import NotFound from './NotFound';
 import Diplomas from './components/Diplomas';
 import AppAppBar from './components/AppAppBar';
 import CustomSpeedDial from './components/Dial';
 
+import RootPage from './pages/RootPage';
+import Port2025Retreat from './pages/retreats/Port2025';
+import Swiss2025Retreat from './pages/retreats/Swiss2025';
+
 export function App() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={<RootPage />} />
+      <Route path="/swiss-2025" element={<Swiss2025Retreat />} />
+      <Route path="/port-2025" element={<Port2025Retreat />} />
       <Route path="/diplomas" element={<Diplomas />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

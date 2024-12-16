@@ -1,10 +1,9 @@
-import * as React from 'react';
 import { alpha } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Register from './Register';
+// import Register from './Register';
 
 export default function GreetingPage() {
   return (
@@ -47,10 +46,6 @@ export default function GreetingPage() {
               sx={{
                 fontSize: 'clamp(3rem, 10vw, 4rem)',
                 color: 'primary.dark',
-                // color: (theme) =>
-                //   theme.palette.mode === 'light'
-                //     ? 'primary.dark'
-                //     : 'primary.light',
               }}
             >
               Yoga Retreat
@@ -67,36 +62,6 @@ export default function GreetingPage() {
           >
             Release. Refresh. Develop
           </Typography>
-          <Typography
-            variant="h3"
-            sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
-              alignSelf: 'center',
-              textAlign: 'center',
-            }}
-          >
-            4-9 November
-          </Typography>
-          <Typography
-            variant="h3"
-            sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
-              alignSelf: 'center',
-              textAlign: 'center',
-            }}
-          >
-            Tenerife
-          </Typography>
-          <Typography
-            textAlign="center"
-            color="text.secondary"
-            sx={{ alignSelf: 'center', width: '100%', fontSize: '1.6rem' }}
-          >
-            Йога ретрит на острові Тенеріфе. Пірни в глибокий океан Йоги разом з
-            нами
-          </Typography>
           <Box
             component="img"
             src="/asana_wide.jpg"
@@ -109,7 +74,7 @@ export default function GreetingPage() {
               alignSelf: 'center',
             }}
           />
-          <Register />
+          {/* <Register /> */}
         </Stack>
       </Container>
     </Box>

@@ -6,47 +6,38 @@ import EmblaCarouselSimple from './caruosels/Simple';
 
 const teamMembers = [
   {
-    name: 'Вікторія Мицик',
+    name: 'Viktoria Mytsyk',
     title: 'Universal Yoga Teacher RYT 300',
     description: `
-      Із йогою познайомилась більше 10 років тому ще в шкільному віці, і з того часу вона впливає і продовжує впливати на мене та моє життя. 
-      Викладаю з 2020, не раз була учасником і вела майстер-класи на різних йога-фестивалях та благодійних заходах. 
-      Сертифікований Астрокоуч. 
-      «Для мене йога це не тільки фізична практика, а й інструмент пізнання внутрішнього й зовнішнього світу» 
-      У мене серйозний підхід до практики йоги, який прокачує статичну та динамічну силу, гнучкість та баланс. 
-      Моє хобі - це чай та чайні церемонії, з якими я вас познайомлю на нашому ретриті.
+      I discovered yoga more than 10 years ago during my school years, and since then, it has been influencing and continues to shape my life. I’ve been teaching yoga since 2020 and have participated in and led workshops at various yoga festivals and charity events. I am also a certified Astrocoach. For me, yoga is not just a physical practice but a tool for exploring both the inner and outer world. My approach to yoga is disciplined and focused on developing static and dynamic strength, flexibility, and balance. One of my hobbies is tea and tea ceremonies, which I look forward to sharing with you during our retreat.
     `,
     images: [
       {
-        image: '/vika_mt_main.JPG',
+        image: '/teachers/vika_m_first.jpg',
         maxWidth: 800,
         maxHeight: 1200,
       },
       {
-        image: '/mz1.jpg',
+        image: '/teachers/vika_m_second.jpg',
         maxWidth: 800,
         maxHeight: 1200,
       },
     ],
   },
   {
-    name: 'Вікторія Чорножук',
+    name: 'Viktoria Chornozhuk',
     title: 'Traditional Hatha and Vinyasa teacher RYT 200',
     description: `
-      Познайомилася з йогою майже 10 років тому, але неймовірно закохана в неї та практикую із 2020. 
-      У своєму викладанні я поєдную різні стилі йоги та медитації, приділяючи значну увагу Універсальній йозі. 
-      Я вірю, що моє викладання приносить у життя людей більше доброти, внутрішньої сили, миру та радості. 
-      Наразі я розширюю свій досвід та знання, вивчаючи Джйотіш (ведичну) астрологію, додаючи ще один інструмент до свого холістичного підходу в роботі із різними оболонками - як ментальною, так і фізичною. 
-      Мої заспокійливі сеанси йоги-нідри допоможуть вам глибоко фізично розслабитися, зберігаючи розум на фокусі ваших відчуттів, що приведе вас до справжнього розслаблення тіла та розуму.
+      I first discovered yoga nearly 10 years ago, but it wasn’t until 2020 that I fell deeply in love with the practice and began my yoga journey in earnest. In my teaching, I blend different yoga styles and meditation techniques, with a special focus on Universal Yoga.  I believe that my teaching brings more calmness, inner strength, peace, and joy into people's lives. Currently, I am deepening my knowledge and experience by studying Jyotish (Vedic astrology), adding another tool to my holistic approach in working with both the mental and physical layers of being.  My soothing Yoga Nidra sessions will help you experience deep physical relaxation while keeping your mind focused on your sensations, leading you to true relaxation of the body and mind.
     `,
     images: [
       {
-        image: '/vika_ch_first.jpg',
+        image: '/teachers/vika_ch_first.jpg',
         maxWidth: 800,
         maxHeight: 1200,
       },
       {
-        image: '/vika_asana.jpg',
+        image: '/teachers/vika_ch_second.jpg',
         maxWidth: 800,
         maxHeight: 1200,
       },
@@ -63,7 +54,7 @@ function AboutUs() {
         textAlign="center"
         sx={{ mb: 4, fontWeight: 'bold' }}
       >
-        Про нас
+        About us
       </Typography>
       {teamMembers.map((member, index) => (
         <Grid container spacing={4} key={index} sx={{ mb: 4 }}>

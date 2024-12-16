@@ -16,14 +16,14 @@ import Telegram from '@mui/icons-material/Telegram';
 
 const people = [
   {
-    name: 'Вікторія Мицик',
+    name: 'Viktoria Mytsyk',
     role: 'Universal Yoga Teacher RYT 300',
     instagram: 'https://www.instagram.com/oum_victory/',
     whatsApp: 'https://wa.me/798236967',
     avatar: '/soc_mt.png',
   },
   {
-    name: 'Вікторія Чорножук',
+    name: 'Viktoria Chornozhuk',
     role: 'Traditional Hatha and Vinyasa Teacher RYT 200',
     instagram: 'https://www.instagram.com/vickydrum/',
     telegram: 'https://t.me/vickydrum',
@@ -35,7 +35,7 @@ function SocialSection() {
   return (
     <Container id="social-section" sx={{ mt: 4, mb: 10 }}>
       <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
-        Наші соціальні мережі
+        Our social networks
       </Typography>
       <Grid container spacing={4} alignItems="stretch">
         {people.map((person, index) => (

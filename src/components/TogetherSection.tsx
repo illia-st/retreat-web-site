@@ -14,7 +14,7 @@ function TogetherSection() {
   return (
     <Container sx={{ mt: 4, mb: 4 }}>
       <Typography id="together" variant="h2" textAlign="center" sx={{ mb: 4 }}>
-        Чому ми робимо це разом
+        Why We’re Doing This Together
       </Typography>
       <Grid
         container
@@ -30,12 +30,14 @@ function TogetherSection() {
               lineHeight: 1.6,
             }}
           >
-            Ми зустрілися 2 роки тому і зрозуміли - це кармічно. Розділяючи одне
-            ім’я, дружбу та найголовніше - любов до йоги, ідея про створення
-            нашого сумісного ретриту не змусила довго чекати свого виходу в
-            світ. Постійно розвиваючись та отримуючи кожного дня новий досвід
-            від життя, інстайтів та щоденних практик, ми неймовірно сильно
-            чекаємо на ту мить, коли ми розділимо свій шлях та досвід з Вами!
+            We met two years ago and instantly knew—it was karmic. Sharing not
+            only a name and friendship but, most importantly, a deep love for
+            yoga, the idea of creating our joint retreat was a natural evolution
+            that quickly came to life. Constantly growing, learning from
+            life&apos;s experiences, daily practices, and moments of insight, we
+            incredibly excited to share our journey and wisdom with you. We
+            can&apos;t wait for the moment when our paths cross, and we create
+            something meaningful together!
           </Typography>
         </Grid>
         {/* Need to add a cool carousel */}
@@ -70,7 +72,7 @@ function TogetherSection() {
               textAlign="center"
               sx={{ textTransform: 'none' }}
             >
-              Наші дипломи
+              Our diplomas
             </Typography>
           </Button>
         </Grid>
