@@ -14,38 +14,38 @@ import {
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import CloseIcon from '@mui/icons-material/Close';
 
-const includedItems = [
-  'Вся йога програма - як на віллі, так і за межами неї',
-  'Користування килимками, блоками та подушками для медитацій',
-  'Всі невиїзні активності',
-  'Проживання (постіль, рушники - ванні та пляжні)',
-  'Дворазове вегетаріанське харчування',
-  'Снеки та фрукти',
-  'Чайні церемонії',
-  'Професійні фото та контент протягом ретриту',
-  'Wi-fi на віллі',
-  'Допомога у пошуку, купівлі квитків та надання інформації по острову та підготовці до поїздки',
-  'Підтримка та наставництво після ретриту',
-  'Спільнота однодумців',
-];
+// const includedItems = [
+//   'Вся йога програма - як на віллі, так і за межами неї',
+//   'Користування килимками, блоками та подушками для медитацій',
+//   'Всі невиїзні активності',
+//   'Проживання (постіль, рушники - ванні та пляжні)',
+//   'Дворазове вегетаріанське харчування',
+//   'Снеки та фрукти',
+//   'Чайні церемонії',
+//   'Професійні фото та контент протягом ретриту',
+//   'Wi-fi на віллі',
+//   'Допомога у пошуку, купівлі квитків та надання інформації по острову та підготовці до поїздки',
+//   'Підтримка та наставництво після ретриту',
+//   'Спільнота однодумців',
+// ];
 
-const notIncludedItems = [
-  'Переліт (рекомендуємо прилетіти до Північного аеропорту Тенеріфе)',
-  'Трансфер з аеропорту до вілли (але можлива допомога із організацією групового трансферу)',
-  'Туристичне страхування',
-  'Витрати на особисті потреби',
-  'Прання - 2 євро за кожне, включаючи миючий засіб',
-];
+// const notIncludedItems = [
+//   'Переліт (рекомендуємо прилетіти до Північного аеропорту Тенеріфе)',
+//   'Трансфер з аеропорту до вілли (але можлива допомога із організацією групового трансферу)',
+//   'Туристичне страхування',
+//   'Витрати на особисті потреби',
+//   'Прання - 2 євро за кожне, включаючи миючий засіб',
+// ];
 
-function IncludedSection() {
+function IncludedSection({ items }: { items: string[] }) {
   const theme = useTheme();
   return (
     <Container sx={{ mt: 4, mb: 4 }}>
       <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
-        Що входить у вартість
+        What is included in the price?
       </Typography>
       <Grid container spacing={4} alignItems="stretch">
-        {includedItems.map((item, index) => (
+        {items.map((item, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card
               sx={{
@@ -83,15 +83,15 @@ function IncludedSection() {
   );
 }
 
-function NotIncludedSection() {
+function NotIncludedSection({ items }: { items: string[] }) {
   const theme = useTheme();
   return (
     <Container sx={{ mt: 4, mb: 4 }}>
       <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
-        Що не входить у вартість
+        What is not included in the price?
       </Typography>
       <Grid container spacing={4} alignItems="stretch">
-        {notIncludedItems.map((item, index) => (
+        {items.map((item, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card
               sx={{
@@ -128,12 +128,17 @@ function NotIncludedSection() {
   );
 }
 
-function Included() {
+export interface IncludedInterface {
+  includedItems: string[];
+  notIncludedItems: string[];
+}
+
+function Included({ includedItems, notIncludedItems }: IncludedInterface) {
   return (
     <>
-      <IncludedSection />
+      <IncludedSection items={includedItems} />
       <Divider />
-      <NotIncludedSection />
+      <NotIncludedSection items={notIncludedItems} />
     </>
   );
 }
