@@ -12,13 +12,14 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 // Interface for the FAQ component props
 export interface FAQInterface {
+  title: string;
   items: {
     title: string;
     subItems: string[];
   }[];
 }
 
-export default function FAQ({ items }: FAQInterface) {
+export default function FAQ({ title, items }: FAQInterface) {
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
   const handleChange =
@@ -48,7 +49,7 @@ export default function FAQ({ items }: FAQInterface) {
           textAlign: { sm: 'left', md: 'center' },
         }}
       >
-        FAQ
+        {title}
       </Typography>
       <Box sx={{ width: '100%' }}>
         {items.map((item, index) => {
@@ -58,7 +59,7 @@ export default function FAQ({ items }: FAQInterface) {
               key={index}
               expanded={expanded === panelId}
               onChange={handleChange(panelId)}
-              sx={{ backgroundColor: 'primary.main', mb: 2 }}
+              sx={{ backgroundColor: 'primary.main' }}
             >
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}

@@ -15,6 +15,11 @@ import {
   accomodationUnits,
   descriptionForDesc,
 } from '../../data/swiss2025/livingSection';
+import Price from '../../components/Price';
+import included from '../../data/swiss2025/includedItems';
+import notIncluded from '../../data/swiss2025/notIncludedItems';
+import faqItems from '../../data/swiss2025/faq';
+import YogaRetreatHero from '../../components/YogaRetreatHero';
 
 interface Swiss2025Iterface extends AppInterface {}
 
@@ -62,6 +67,10 @@ export default function Swiss2025Retreat({
 
       {/* This one is good is any case but need to make is general */}
       {/* I guess we can Living Section with PriceSection */}
+      <YogaRetreatHero />
+      <Divider />
+      <Price />
+      <Divider />
       <LivingSection
         // eslint-disable-next-line no-restricted-globals
         description={location}
@@ -69,14 +78,13 @@ export default function Swiss2025Retreat({
         accomodationUnits={accomodationUnits}
         accommodationDesc={descriptionForDesc}
       />
-      {/* <ScheduleSection /> should be reworked */}
-      {/* <ActivitiesSection /> no need */}
       <Divider />
       <TransportInfo data={arrivalData} />
       <Divider />
-      <Included includedItems={[]} notIncludedItems={[]} />
+      <Included includedItems={included} notIncludedItems={notIncluded} />
       <Divider />
-      <FAQ items={[]} />
+      <FAQ title={faqItems.title} items={faqItems.items} />
+      <Divider />
       <Register />
       <Divider />
       <SocialSection />
