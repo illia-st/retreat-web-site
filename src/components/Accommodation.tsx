@@ -234,8 +234,17 @@ function Accomodation({ units, description }: AccomodationInterface) {
             />
           </Card>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Typography variant="body1">{description}</Typography>
+        <Grid item xs={12} md={12}>
+          <Typography
+            component="div"
+            variant="h6"
+            dangerouslySetInnerHTML={{ __html: description }}
+            sx={{
+              // whiteSpace: 'pre-line',
+              fontSize: '1.6rem',
+              lineHeight: 1.6,
+            }}
+          />
         </Grid>
       </Grid>
     </Container>

@@ -16,6 +16,7 @@ import RootPage from './pages/RootPage';
 import Port2025Retreat from './pages/retreats/Port2025';
 import Swiss2025Retreat from './pages/retreats/Swiss2025';
 import AppInterface from './interfaces/AppInterface';
+import Tenerife2025Retreat from './pages/retreats/Tenerife2025';
 
 export function App({ setAppBarItemsCallback }: AppInterface) {
   return (
@@ -34,6 +35,14 @@ export function App({ setAppBarItemsCallback }: AppInterface) {
         path="/port-2025"
         element={
           <Port2025Retreat setAppBarItemsCallback={setAppBarItemsCallback} />
+        }
+      />
+      <Route
+        path="/tenerife-2025"
+        element={
+          <Tenerife2025Retreat
+            setAppBarItemsCallback={setAppBarItemsCallback}
+          />
         }
       />
       <Route

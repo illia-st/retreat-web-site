@@ -20,9 +20,10 @@ function TransportInfo({ data }: TransportInfoProps) {
   return (
     <Container sx={{ py: { xs: 6, sm: 12 } }}>
       <Typography
-        variant="h4"
+        id="get_there"
+        variant="h2"
         textAlign="center"
-        fontWeight="bold"
+        // fontWeight="bold"
         gutterBottom
       >
         How to get to the property?
@@ -53,7 +54,7 @@ function TransportInfo({ data }: TransportInfoProps) {
               label={item.title}
               sx={{
                 textTransform: 'none',
-                fontSize: '1rem',
+                fontSize: '1.5rem',
                 fontWeight: activeTab === index ? 'bold' : 'normal',
               }}
             />
@@ -64,7 +65,7 @@ function TransportInfo({ data }: TransportInfoProps) {
         <Box
           sx={{
             width: '100%',
-            maxWidth: '800px',
+            maxWidth: '1000px',
             p: 3,
             backgroundColor: 'background.paper',
             borderRadius: 2,
@@ -76,12 +77,10 @@ function TransportInfo({ data }: TransportInfoProps) {
               // eslint-disable-next-line react/no-array-index-key
               key={idx}
               variant="body1"
-              color="text.secondary"
               gutterBottom
-              sx={{ fontSize: '1rem' }}
-            >
-              {paragraph}
-            </Typography>
+              sx={{ fontSize: '1.5rem' }}
+              dangerouslySetInnerHTML={{ __html: paragraph }}
+            />
           ))}
         </Box>
       </Box>

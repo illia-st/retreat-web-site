@@ -130,8 +130,6 @@ function LivingSection({
   accomodationUnits,
   accommodationDesc,
 }: LivingSectionInterface) {
-  debugger;
-  console.log(description, photoes, accomodationUnits);
   return (
     <>
       <Container sx={{ mt: 4, mb: 4 }}>

@@ -26,7 +26,13 @@ function Register() {
         alignSelf="center"
         spacing={1}
         useFlexGap
-        sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          pt: { xs: 8, sm: 12 },
+          pb: { xs: 8, sm: 12 },
+        }}
       >
         <Button
           type="submit"

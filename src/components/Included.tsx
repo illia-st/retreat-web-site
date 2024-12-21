@@ -41,7 +41,7 @@ function IncludedSection({ items }: { items: string[] }) {
   const theme = useTheme();
   return (
     <Container sx={{ mt: 4, mb: 4 }}>
-      <Typography variant="h2" textAlign="center" sx={{ mb: 4 }}>
+      <Typography id="included" variant="h2" textAlign="center" sx={{ mb: 4 }}>
         What is included in the price?
       </Typography>
       <Grid container spacing={4} alignItems="stretch">

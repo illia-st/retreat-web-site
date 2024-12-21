@@ -11,32 +11,32 @@ export const photoes: Slide[] = [
   {
     image: '/swiss2025/aussen-1-scaled.jpg',
     maxHeight: 500,
-    maxWidth: 500,
+    maxWidth: 800,
   },
   {
     image: '/swiss2025/caption.jpg',
     maxHeight: 500,
-    maxWidth: 500,
+    maxWidth: 800,
   },
   {
     image: '/swiss2025/entspannungsraum-genutzt.jpg',
     maxHeight: 500,
-    maxWidth: 500,
+    maxWidth: 800,
   },
   {
     image: '/swiss2025/geniessen-sie-ihre-ankunft.jpg',
     maxHeight: 500,
-    maxWidth: 500,
+    maxWidth: 800,
   },
   {
     image: '/swiss2025/hotel-summer-garden.jpg',
     maxHeight: 500,
-    maxWidth: 500,
+    maxWidth: 800,
   },
   {
-    image: '/swiss2025/ausen-2.jpg',
+    image: '/swiss2025/aussen-2.jpg',
     maxHeight: 500,
-    maxWidth: 500,
+    maxWidth: 1000,
   },
 ];
 
@@ -60,7 +60,7 @@ export const accomodationUnits: AccomodationUnit[] = [
     title: 'Triple room',
     titleWithPrice: null,
     price: null,
-    image: 'swiss2025/4-place-room.jpg',
+    image: '/swiss2025/4-place-room.jpg',
   },
 ];
 

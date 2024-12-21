@@ -19,27 +19,9 @@ import Price from '../../components/Price';
 import included from '../../data/swiss2025/includedItems';
 import notIncluded from '../../data/swiss2025/notIncludedItems';
 import faqItems from '../../data/swiss2025/faq';
-import YogaRetreatHero from '../../components/YogaRetreatHero';
+import RetreatHero from '../../components/RetreatHero';
 
 interface Swiss2025Iterface extends AppInterface {}
-
-/*
-
-This text is for preview
-
-Yoga-Retreat: Frühlingserwachen
-Feiere mit Viktoria M. & Viktoria V. die Frühlings-Tagundnachtgleiche! Erwecke deinen Körper und Geist mit taglich Hatha-Yoga, Meditation und Yoga Nidra.
-Lade neue Energie auf und begrüße die Saison der Erneuerung! 🌸 
-**Retreat-Sprache:** Englisch mit der Möglichkeit, ins Deutsche und Ukrainische zu übersetzen.  
-
-
-Spring Awakening Yoga Retreat
-Join Viktoria M. & Viktoria V. to celebrate the Spring Equinox! Rejuvenate your mind and body with daily Hatha yoga, meditation, and Yoga Nidra.
-Embrace new energy and welcome the season of renewal! 🌸 
-**Retreat language:** English with the possibility of translation into German and Ukrainian.
-
-double language component (en and ger)
-*/
 
 export default function Swiss2025Retreat({
   setAppBarItemsCallback,
@@ -48,31 +30,25 @@ export default function Swiss2025Retreat({
     // Update AppBar items only once on component mount
     setAppBarItemsCallback([
       { id: 'greeting', label: 'Greeting' },
-      { id: 'retreats', label: 'Available Retreats' },
+      { id: 'price', label: 'Price' },
+      { id: 'live', label: 'Where will we live?' },
+      { id: 'get_there', label: 'How to get there?' },
+      { id: 'included', label: 'Included in the price' },
+      { id: 'faq_section', label: 'What to take?' },
+      { id: 'register', label: 'Register' },
+      { id: 'socials', label: 'Social Networks' },
     ]);
   }, [setAppBarItemsCallback]); // Depend only on callback
   return (
     <>
-      {/* <GreetingPage /> */}
-      {/* <Divider /> */}
-      {/* <BasicInfo /> */}
-      {/* <Divider /> */}
-      {/* <AboutUs /> */}
-      {/* <Divider /> */}
-      {/* <TogetherSection /> */}
-      {/* <Divider /> */}
-      {/* Something about retreat component */}
-      {/* Need to think of something general which can be used for any reatreat */}
-      {/* Just give there a config, like json object and here we go */}
-
-      {/* This one is good is any case but need to make is general */}
-      {/* I guess we can Living Section with PriceSection */}
-      <YogaRetreatHero />
+      <RetreatHero
+        mainPhoto="/swiss2025/aussen-2.jpg"
+        retreatName="Waltensburg/Vuorz, Graubünden, Switzerland"
+      />
       <Divider />
       <Price />
       <Divider />
       <LivingSection
-        // eslint-disable-next-line no-restricted-globals
         description={location}
         photoes={photoes}
         accomodationUnits={accomodationUnits}

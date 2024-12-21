@@ -29,6 +29,7 @@ export default function FAQ({ title, items }: FAQInterface) {
 
   return (
     <Container
+      id="faq_section"
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
@@ -40,13 +41,12 @@ export default function FAQ({ title, items }: FAQInterface) {
       }}
     >
       <Typography
-        id="faq"
         component="h2"
-        variant="h4"
+        variant="h2"
         color="text.primary"
         sx={{
           width: { sm: '100%', md: '60%' },
-          textAlign: { sm: 'left', md: 'center' },
+          textAlign: 'center',
         }}
       >
         {title}

@@ -3,11 +3,11 @@ import { Divider, Typography } from '@mui/material';
 import AppInterface from '../../interfaces/AppInterface';
 import RetreatHero from '../../components/RetreatHero';
 
-interface Port2025Iterface extends AppInterface {}
+interface Tenerife2025Iterface extends AppInterface {}
 
-export default function Port2025Retreat({
+export default function Tenerife2025Retreat({
   setAppBarItemsCallback,
-}: Port2025Iterface) {
+}: Tenerife2025Iterface) {
   useEffect(() => {
     // Update AppBar items only once on component mount
     setAppBarItemsCallback([{ id: 'greeting', label: 'Greeting' }]);
@@ -15,8 +15,8 @@ export default function Port2025Retreat({
   return (
     <>
       <RetreatHero
-        mainPhoto="/portugal-4442631_1280.jpg"
-        retreatName="Portugal Late Spring 2025"
+        mainPhoto="/places/puerto-de-la-cruz-15.jpeg"
+        retreatName="Tenerife, Canary Islands, Spain"
       />
       <Divider />
       <Typography
