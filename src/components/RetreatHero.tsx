@@ -69,7 +69,7 @@ export default function RetreatHero({
           >
             Release. Refresh. Develop
           </Typography>
-          <Typography
+          {/* <Typography
             variant="h3"
             sx={{
               display: 'flex',
@@ -79,7 +79,14 @@ export default function RetreatHero({
             }}
           >
             {retreatName}
-          </Typography>
+          </Typography> */}
+          <Typography
+            // eslint-disable-next-line react/no-array-index-key
+            variant="h3"
+            gutterBottom
+            sx={{ fontSize: '1.5rem' }}
+            dangerouslySetInnerHTML={{ __html: retreatName }}
+          />
           <Box
             component="img"
             src={mainPhoto}

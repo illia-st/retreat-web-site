@@ -13,71 +13,17 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import EmblaCarouselSimple from './caruosels/Simple';
 
 const sections = [
-  // {
-  //   title: 'Що вас чекає:',
-  //   content1: `• 5 днів на вулканічному острові вічної весни з унікальною природою\n
-  //   • 2 практики в день якісної аутентичної йоги, яка розширить ліміти вашого тіла та розуму\n
-  //   • Щоденні практики медитацій, пранаям (дихання)\n
-  //   • Цвяхостояння\n
-  //   • Глибока релаксація - Йога-нідра зі співочими чашами`,
-  //   images1: [
-  //     {
-  //       image: '/asana1.jpg',
-  //       maxHeight: 500,
-  //       maxWidth: 300,
-  //     },
-  //   ],
-  //   content2: `• Проживання у 100-річному традиційному ретритному центрі з видом на океан\n
-  //   • Вегетаріанське детокс харчування двічі на день від холістичного шеф-кухаря\n
-  //   • Знайомство з філософією Йоги\n
-  //   • Коло сили та підтримки\n
-  //   • Чайні церемонії та ароматерапії\n
-  //   • Подорожі островом, пляжі з чорним вулканічним піском, фруктові плантації\n
-  //   • Відпочинок, перезавантаження та новий погляд на звичні речі\n
-  //   • Професійний контент та фотосесія`,
-  //   images2: [
-  //     {
-  //       image: '/places/IMG_6683.jpg',
-  //       maxHeight: 500,
-  //       maxWidth: 300,
-  //     },
-  //     {
-  //       image: '/places/IMG_6684.jpg',
-  //       maxHeight: 500,
-  //       maxWidth: 300,
-  //     },
-  //     {
-  //       image: '/places/IMG_6715.jpg',
-  //       maxHeight: 500,
-  //       maxWidth: 300,
-  //     },
-  //     {
-  //       image: '/places/IMG_6716.jpg',
-  //       maxHeight: 500,
-  //       maxWidth: 300,
-  //     },
-  //     {
-  //       image: '/places/IMG_6802.jpg',
-  //       maxHeight: 500,
-  //       maxWidth: 300,
-  //     },
-  //     {
-  //       image: '/places/IMG_7263.PNG',
-  //       maxHeight: 500,
-  //       maxWidth: 300,
-  //     },
-  //     {
-  //       image: '/places/iStock-1264675861 RFC.avif',
-  //       maxHeight: 500,
-  //       maxWidth: 300,
-  //     },
-  //     {
-  //       image: '/places/puerto-de-la-cruz-15.jpeg',
-  //       maxHeight: 500,
-  //       maxWidth: 300,
-  //     },
-  //   ],
-  // },
+  {
+    title: 'Why Our Team?',
+    content: `• Improve your physical strength, flexibility, and overall fitness.\n
+      • Build greater self-discipline.\n
+      • Develop a deeper awareness of your thoughts and feelings.\n
+      • Connect more profoundly with yourself.\n
+      • Release tension and emotional blocks.\n
+      • Cultivate greater self-love.\n
+      • Discover how to feel joy simply for being.  
+    `,
+  },
   {
     title: 'What will you get from the retreat?',
     content: `• Improve your physical strength, flexibility, and overall fitness.\n

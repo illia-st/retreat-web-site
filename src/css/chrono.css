@@ -1,8 +1,32 @@
 /* styles.css */
 .chrono-card-title {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: normal !important;
+    white-space: pre-line;
+    line-height: 1.6;
+    font-size: 1.6rem;
+    margin-left: 15px !important;
+    margin-top: 15px !important;
 }
 
 .chrono-card-subtitle {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: normal !important;
+    white-space: pre-line;
+    line-height: 1.6;
+    font-size: 1.6rem;
+    margin-left: 15px !important;
+    margin-top: 15px !important;
+}
+
+.my-card-text {
+    white-space: pre-line;
+}
+
+.my-card {
+    border-radius: 16px;
+    padding: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    top: 0;
 }

@@ -2,7 +2,8 @@
 import React from 'react';
 import { Container, Grid, Typography } from '@mui/material';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import EmblaCarouselSimple from './caruosels/Simple';
+// import EmblaCarouselSimple from './caruosels/Simple';
+import EmblaCarouselWithButtons from './caruosels/WithButtons/Carousel';
 
 const teamMembers = [
   {
@@ -59,7 +60,8 @@ function AboutUs() {
       {teamMembers.map((member, index) => (
         <Grid container spacing={4} key={index} sx={{ mb: 4 }}>
           <Grid item xs={12} sm={4}>
-            <EmblaCarouselSimple slides={member.images} options={{}} />
+            {/* <EmblaCarouselSimple slides={member.images} options={{}} /> */}
+            <EmblaCarouselWithButtons slides={member.images} options={{}} />
           </Grid>
           <Grid item xs={12} sm={8}>
             <Typography

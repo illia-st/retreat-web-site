@@ -20,6 +20,9 @@ import included from '../../data/swiss2025/includedItems';
 import notIncluded from '../../data/swiss2025/notIncludedItems';
 import faqItems from '../../data/swiss2025/faq';
 import RetreatHero from '../../components/RetreatHero';
+import '../../css/retreatHeader.css';
+import SwissPromo from '../../components/Promo';
+import ScheduleSection from '../../components/ScheduleSection';
 
 interface Swiss2025Iterface extends AppInterface {}
 
@@ -43,10 +46,14 @@ export default function Swiss2025Retreat({
     <>
       <RetreatHero
         mainPhoto="/swiss2025/aussen-2.jpg"
-        retreatName="Waltensburg/Vuorz, Graubünden, Switzerland"
+        retreatName={`<div class="retreatHeader retreatHeaderBiggerText">Waltensburg/Vuorz, Graubünden, Switzerland</div><div class="retreatHeader retreatHeaderSmallerText">21-23 March 2025</div>`}
       />
       <Divider />
       <Price />
+      <Divider />
+      <SwissPromo />
+      <Divider />
+      <ScheduleSection />
       <Divider />
       <LivingSection
         description={location}

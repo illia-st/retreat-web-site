@@ -5,6 +5,12 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 // import Register from './Register';
 
+const dearSoul = `
+Hello, dear soul!
+Welcome to our space, where you’ll discover yoga retreats designed to nurture your body and soul. We’re genuinely excited to meet you and support you on this transformative journey. Are you ready to take your first step toward renewed peace of body and mind, inner joy, and self-development?
+We’re here to guide you with care, honoring yoga traditions while listening to the whispers of modern reality.
+`;
+
 export default function GreetingPage() {
   return (
     <Box
@@ -62,6 +68,53 @@ export default function GreetingPage() {
           >
             Release. Refresh. Develop
           </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              display: 'flex',
+              fontSize: 'clamp(1.5rem, 5vw, 1rem)',
+              flexDirection: { xs: 'column', md: 'row' },
+              alignSelf: 'left',
+              textAlign: 'left',
+            }}
+          >
+            {dearSoul}
+          </Typography>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'flex-end',
+            }}
+          >
+            <Typography
+              variant="h5"
+              sx={{
+                fontFamily: 'bold',
+              }}
+            >
+              “Yoga is the journey of the self, through the self, to the self.”
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{
+                fontFamily: 'cursive',
+              }}
+            >
+              - Bhagavad Gita 6.47
+            </Typography>
+          </Box>
+          <Typography
+            variant="h3"
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              alignSelf: 'center',
+              textAlign: 'center',
+            }}
+          >
+            Let’s begin this beautiful path together!
+          </Typography>
           <Box
             component="img"
             src="/asana_wide.jpg"
@@ -74,7 +127,6 @@ export default function GreetingPage() {
               alignSelf: 'center',
             }}
           />
-          {/* <Register /> */}
         </Stack>
       </Container>
     </Box>

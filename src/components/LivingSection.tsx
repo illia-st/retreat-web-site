@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
 import React from 'react';
 import { Container, Divider, Grid, Typography } from '@mui/material';
-import EmblaCarouselSimple, { Slide } from './caruosels/Simple';
+import { Slide } from './caruosels/Simple';
 import Accomodation, { AccomodationUnit } from './Accommodation';
+import EmblaCarouselWithButtons from './caruosels/WithButtons/Carousel';
 
 // const images = [
 //   {
@@ -151,7 +152,7 @@ function LivingSection({
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <EmblaCarouselSimple slides={photoes} options={{}} />
+            <EmblaCarouselWithButtons slides={photoes} options={{}} />
           </Grid>
         </Grid>
       </Container>

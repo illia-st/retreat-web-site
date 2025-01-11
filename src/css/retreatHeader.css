@@ -1,0 +1,16 @@
+.retreatHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.retreatHeaderBiggerText {
+    font-size: clamp(2rem, 10vw, 3rem);
+}
+
+.retreatHeaderSmallerText {
+    font-size: clamp(1.5rem, 10vw, 2rem);
+}

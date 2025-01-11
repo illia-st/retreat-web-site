@@ -18,7 +18,7 @@ const retreats = [
   {
     title: 'Waltensburg/Vuorz, Graubünden, Switzerland',
     date: '21-23 March 2025',
-    image: '/swiss2025/aussen-2.jpg', // Replace with actual image URL
+    image: '/swiss2025/promo.JPG', // Replace with actual image URL
     link: '/swiss-2025',
   },
   {

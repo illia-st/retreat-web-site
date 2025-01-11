@@ -19,9 +19,16 @@ function TogetherSection() {
       <Grid
         container
         spacing={4}
-        sx={{ display: 'flex', justifyContent: 'right' }}
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       >
-        <Grid item xs={12} sm={4}>
+        <Grid
+          item
+          xs={12}
+          sm={4}
+          width="100%"
+          height="100%"
+          alignSelf="flex-start"
+        >
           <Typography
             variant="body1"
             sx={{
@@ -33,15 +40,19 @@ function TogetherSection() {
             We met two years ago and instantly knew—it was karmic. Sharing not
             only a name and friendship but, most importantly, a deep love for
             yoga, the idea of creating our joint retreat was a natural evolution
-            that quickly came to life. Constantly growing, learning from
-            life&apos;s experiences, daily practices, and moments of insight, we
-            incredibly excited to share our journey and wisdom with you. We
-            can&apos;t wait for the moment when our paths cross, and we create
-            something meaningful together!
+            that quickly came to life.
           </Typography>
         </Grid>
         {/* Need to add a cool carousel */}
-        <Grid item xs={12} sm={8}>
+        <Grid
+          item
+          xs={12}
+          sm={4}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          sx={{ m: 0 }}
+        >
           <Box
             component="img"
             loading="lazy"
@@ -50,13 +61,28 @@ function TogetherSection() {
             src={asanas[0].image}
             alt="Togerher asanas"
             sx={{
-              width: '100%',
-              height: '100%',
+              width: '85%',
+              height: '75%',
               objectFit: 'cover',
               borderRadius: '8px',
               boxShadow: 3,
             }}
           />
+        </Grid>
+        <Grid item xs={12} sm={4} width="80%" height="80%" alignSelf="flex-end">
+          <Typography
+            variant="body1"
+            sx={{
+              whiteSpace: 'pre-line',
+              fontSize: '1.6rem',
+              lineHeight: 1.6,
+            }}
+          >
+            Constantly growing, learning from life&apos;s experiences, daily
+            practices, and moments of insight, we incredibly excited to share
+            our journey and wisdom with you. We can&apos;t wait for the moment
+            when our paths cross, and we create something meaningful together!
+          </Typography>
         </Grid>
         <Grid
           item
