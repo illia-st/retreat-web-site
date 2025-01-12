@@ -14,7 +14,7 @@ export interface PromoInterface {
 
 const photoLeft = '/swiss2025/vikasForSwissAsana.PNG';
 const textRight = `
-  Welcome to our Sprinр Awakening Yoga Retreat, a space for true renewal and gentle transformation.
+  Welcome to our Spring Awakening Yoga Retreat, a space for true renewal and gentle transformation.
 
   Imagine mornings filled with yoga and pranayama in the fresh embrace of the forest, moments of mindful  under the open sky in the mountains, and sharing warm tea surrounded by nature's beauty.
 

@@ -109,7 +109,9 @@ function Accomodation({ units, description }: AccomodationInterface) {
             variant="outlined"
             sx={{
               display: { xs: 'auto', sm: 'none' },
+              background: 'none',
               mt: 4,
+              border: 'none',
             }}
           >
             <Box
@@ -171,6 +173,8 @@ function Accomodation({ units, description }: AccomodationInterface) {
                       textAlign: 'left',
                       flexDirection: { xs: 'column', md: 'row' },
                       alignItems: { md: 'center' },
+                      background: 'none',
+                      border: 'none',
                       gap: 2.5,
                     }}
                   >
@@ -219,6 +223,8 @@ function Accomodation({ units, description }: AccomodationInterface) {
               width: '100%',
               display: { xs: 'none', sm: 'flex' },
               pointerEvents: 'none',
+              background: 'none',
+              border: 'none',
             }}
           >
             <Box
@@ -230,6 +236,7 @@ function Accomodation({ units, description }: AccomodationInterface) {
                 height: '100%',
                 objectFit: 'cover',
                 borderRadius: 2,
+                background: 'none',
               }}
             />
           </Card>

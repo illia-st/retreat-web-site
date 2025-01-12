@@ -88,7 +88,7 @@ function ReviewComponent() {
             position: 'relative',
             width: '500px',
             textAlign: 'center',
-            height: isXs ? 650 : 450,
+            height: isXs ? 850 : 450,
             overflow: 'hidden',
           }}
         >
@@ -109,7 +109,7 @@ function ReviewComponent() {
                   border: '1px solid #ddd',
                   position: 'relative',
                   width: '100%',
-                  height: isXs ? 650 : 450,
+                  height: isXs ? 850 : 450,
                   top: 0,
                 }}
               >

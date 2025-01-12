@@ -67,28 +67,28 @@ import '../css/chrono.css';
 const dailySchedule = [
   {
     title: 'Arrival Day',
-    cardTitle: `• 5:00 PM: welcome circle
+    cardTitle: `• 5:00 PM: Welcome circle
       • 5:30 PM: Yoga practice- all body balance 
       • 7:00 PM: Group Dinner
-      • 8:00PM: masala tee, reflection circle`,
+      • 8:00 PM: Masala tee, reflection circle`,
     cardSubtitle: '',
   },
   {
     title: 'Saturday',
-    cardTitle: `• 7:00AM: morning meditation 
-      • 7:45AM: yoga - Accent power 
-      • 9:00AM: Breakfast
+    cardTitle: `• 7:00 AM: Morning meditation 
+      • 7:45 AM: Yoga - Accent power 
+      • 9:00 AM: Breakfast
       • 11:00 AM: Hiking in silence(partway) 
       • 1:30 PM: Picnic in nature 
       • 4:00 PM: Tee ceremony 
       • 5:00 PM: Yoga-accent flexibility + yoga Nidra with Singing bowls 
       • 7:00 PM: Group Dinner
-      • 8:00PM: masala tee, reflection circle`,
+      • 8:00 PM: Masala tee, reflection circle`,
     // cardTitle: '',
   },
   {
     title: 'Sunday',
-    cardTitle: `• 7:00 morning meditation (optional)
+    cardTitle: `• 7:00 AM: Morning meditation (optional)
       • 8:00 AM: Final Yoga Flow
       • 9:00 AM: Course Conclusion
       • 9:30 AM: Breakfast, Check-Out (11:00 AM), and Departure`,

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Divider } from '@mui/material';
+import { Divider, useMediaQuery, useTheme } from '@mui/material';
 import AppInterface from '../../interfaces/AppInterface';
 
 import FAQ from '../../components/FAQ';
@@ -29,6 +29,8 @@ interface Swiss2025Iterface extends AppInterface {}
 export default function Swiss2025Retreat({
   setAppBarItemsCallback,
 }: Swiss2025Iterface) {
+  const theme = useTheme();
+  const isXs = useMediaQuery(theme.breakpoints.down('sm'));
   useEffect(() => {
     // Update AppBar items only once on component mount
     setAppBarItemsCallback([
@@ -46,7 +48,7 @@ export default function Swiss2025Retreat({
     <>
       <RetreatHero
         mainPhoto="/swiss2025/aussen-2.jpg"
-        retreatName={`<div class="retreatHeader retreatHeaderBiggerText">Waltensburg/Vuorz, Graubünden, Switzerland</div><div class="retreatHeader retreatHeaderSmallerText">21-23 March 2025</div>`}
+        retreatName={`<div class="retreatHeader ${isXs ? 'retreatHeaderVerySmallText' : 'retreatHeaderBiggerText'}">Waltensburg/Vuorz, Graubünden, Switzerland</div><div class="retreatHeader retreatHeaderSmallerText">21-23 March 2025</div>`}
       />
       <Divider />
       <Price />

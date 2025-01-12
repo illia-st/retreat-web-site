@@ -4,8 +4,13 @@ import LooksTwoIcon from '@mui/icons-material/LooksTwo';
 import { Slide } from '../../components/caruosels/Simple';
 import { AccomodationUnit } from '../../components/Accommodation';
 
-export const location =
-  'Hotel Ucliva is the first eco-hotel in Switzerland and located in the beautiful mountain village of Waltensburg in Surselva, Graubünden, with stunning views of the surrounding mountains.  The cozy double rooms, which can also be booked for single use, and triple rooms offer views of the mountains or the valley.  The Ucliva restaurant serves delicious regional dishes made with fresh, mostly organic ingredients. Between yoga sessions, you’ll have plenty of time to enjoy the peaceful atmosphere and breathtaking mountain scenery. Relax by the fireplace in the lounge with a good book or unwind in the Thermium sauna. Hotel Ucliva is the perfect place to recharge and find peace away from the busy world.';
+export const location = `Hotel Ucliva is the first eco-hotel in Switzerland and located in the beautiful mountain village of Waltensburg in Surselva, Graubünden, with stunning views of the surrounding mountains.
+
+The cozy double rooms, which can also be booked for single use, and triple rooms offer views of the mountains or the valley.  The Ucliva restaurant serves delicious regional dishes made with fresh, mostly organic ingredients.
+
+Between yoga sessions, you’ll have plenty of time to enjoy the peaceful atmosphere and breathtaking mountain scenery.
+
+Relax by the fireplace in the lounge with a good book or unwind in the Thermium sauna. Hotel Ucliva is the perfect place to recharge and find peace away from the busy world.`;
 
 export const photoes: Slide[] = [
   {
@@ -24,11 +29,6 @@ export const photoes: Slide[] = [
     maxWidth: 800,
   },
   {
-    image: '/swiss2025/geniessen-sie-ihre-ankunft.jpg',
-    maxHeight: 500,
-    maxWidth: 800,
-  },
-  {
     image: '/swiss2025/hotel-summer-garden.jpg',
     maxHeight: 500,
     maxWidth: 800,
@@ -37,6 +37,21 @@ export const photoes: Slide[] = [
     image: '/swiss2025/aussen-2.jpg',
     maxHeight: 500,
     maxWidth: 1000,
+  },
+  {
+    image: '/swiss2025/bread.jpg',
+    maxHeight: 500,
+    maxWidth: 800,
+  },
+  {
+    image: '/swiss2025/cheese.jpg',
+    maxHeight: 500,
+    maxWidth: 800,
+  },
+  {
+    image: '/swiss2025/flowers.jpg',
+    maxHeight: 500,
+    maxWidth: 800,
   },
 ];
 
