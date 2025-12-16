@@ -9,6 +9,7 @@ import AvailableRetreats from './AvailableRetreats';
 import AppInterface from '../interfaces/AppInterface';
 import ReviewComponent from '../components/Reviews';
 import Video from '../components/Video';
+import Memories from '../components/Memories';
 
 interface RootPageIterface extends AppInterface {}
 
@@ -26,8 +27,8 @@ export default function RootPage({ setAppBarItemsCallback }: RootPageIterface) {
     <>
       <GreetingPage />
       <Divider />
-      <Video />
-      <ReviewComponent />
+      {/* <Video /> */}
+      <Memories />
       <Divider />
       <AvailableRetreats />
       <Divider />
