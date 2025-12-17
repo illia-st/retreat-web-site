@@ -52,39 +52,66 @@ Thank you!`,
       name: 'Yevheniia Podlypenko',
       role: 'Retreat Participant',
     },
+    {
+      id: 3,
+      text: `Namaste girls
+I still feel so peaceful and grateful after this retreat! To our wonderful yoga teachers, Vicky & Vicky - thank you, your calm guidance helped me feel so present and connected to nature
+I really needed this. And to all the lovely women I met - your kindness, beauty, and laughter made this time truly special!
+You're all so unique, and that truly inspires me! I left yesterday with a full heart and beautiful memories. Hope we meet again soon!`,
+      name: 'Alexandra',
+      role: 'Retreat Participant',
+    },
+    {
+      id: 4,
+      text: `Thank you so much for organizing this rejuvenating weekend yoga practice. Being surrounded by like-minded souls who share the same energy and intention felt truly uplifting and rare.
+After two days of deep cleansing, I can already sense a noticeable release of stagnation in my abdominal area-it's as if my body is breathing freely again.
+Even though I'm still on my way home, my heart is already longing for the next yoga retreat.
+Grateful beyond words for this healing space and community.`,
+      name: 'Inge',
+      role: 'Retreat Participant',
+    },
+    {
+      id: 5,
+      text: `I am finally home, exhausted but inspired to continue the practice!
+Thanks Vicky and Vicky for the organisation and everyone for being a part of it.
+Peace!`,
+      name: 'Natalie',
+      role: 'Retreat Participant',
+    },
+    {
+      id: 6,
+      text: `Thank you all for everything!
+      We really had a wonderful time and loved sharing this great retreat with all of you!
+      Could not have asked for better company and of course no better yoga instructor.
+      Thanks once again also for letting me bring Benji and that all of you have been so sweet,
+      patient and loving with him`,
+      name: 'Carmen',
+      role: 'Retreat Participant',
+    },
   ];
 
   const theme = useTheme();
+  // Using 'md' as the breakpoint.
+  // Down 'md' = Mobile/Tablet (Cards effect)
+  // Up 'md' = Desktop (Coverflow effect)
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    // Small delay to ensure DOM is ready
     const timer = setTimeout(() => {
       setIsReady(true);
-      if (swiperInstance) {
+      if (swiperInstance && !swiperInstance.destroyed) {
         swiperInstance.update();
       }
     }, 100);
-
     return () => clearTimeout(timer);
   }, [swiperInstance]);
 
-  useEffect(() => {
-    // Force update on resize
-    const handleResize = () => {
-      if (swiperInstance) {
-        swiperInstance.update();
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [swiperInstance]);
-
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" sx={{ overflow: 'hidden' }}>
+      {' '}
+      {/* Prevent page overflow */}
       <Stack
         sx={{
           display: 'flex',
@@ -133,19 +160,17 @@ Thank you!`,
           sx={{
             width: '100%',
             position: 'relative',
-            px: { xs: 0, md: 2 },
+            // Removed fixed paddings that mess up width calculations
             pb: { xs: 5, md: 6 },
             opacity: isReady ? 1 : 0,
             transition: 'opacity 0.3s ease',
+
             '& .swiper': {
               pb: { xs: 4, md: 5 },
-              px: { xs: 1, md: 0 },
-              overflow: 'visible',
+              overflow: 'visible', // Keeps shadow/3D effect visible
             },
-            '& .swiper-wrapper': {
-              alignItems: 'center',
-            },
-            // Desktop navigation
+
+            // Desktop navigation styles
             '& .swiper-button-next, & .swiper-button-prev': {
               display: { xs: 'none', md: 'flex' },
               color: theme.palette.primary.main,
@@ -154,36 +179,25 @@ Thank you!`,
               backgroundColor: alpha(theme.palette.background.paper, 0.95),
               borderRadius: '50%',
               border: `2px solid ${alpha(theme.palette.primary.main, 0.2)}`,
-              transition: 'all 0.3s ease',
+              zIndex: 10, // Ensure buttons are on top
               '&:hover': {
                 backgroundColor: alpha(theme.palette.primary.main, 0.1),
                 transform: 'scale(1.1)',
               },
-              '&::after': {
-                fontSize: '20px',
-                fontWeight: 'bold',
-              },
             },
-            // Pagination dots
+            // Pagination
             '& .swiper-pagination': {
               bottom: { xs: '0', md: '10px' },
             },
-            '& .swiper-pagination-bullet': {
-              width: { xs: 8, md: 10 },
-              height: { xs: 8, md: 10 },
-              backgroundColor: alpha(theme.palette.primary.main, 0.3),
-              opacity: 1,
-              transition: 'all 0.3s ease',
-              margin: { xs: '0 4px', md: '0 5px' },
-            },
             '& .swiper-pagination-bullet-active': {
-              width: { xs: 24, md: 30 },
-              borderRadius: 5,
               backgroundColor: theme.palette.primary.main,
             },
           }}
         >
           <Swiper
+            // KEY PROP IS THE MOST IMPORTANT FIX HERE
+            // It forces React to destroy and recreate the swiper when view changes
+            key={isMobile ? 'mobile-swiper' : 'desktop-swiper'}
             onSwiper={setSwiperInstance}
             modules={[
               Navigation,
@@ -192,11 +206,18 @@ Thank you!`,
               EffectCoverflow,
               EffectCards,
             ]}
+            // Effect Configuration
             effect={isMobile ? 'cards' : 'coverflow'}
             grabCursor={true}
-            centeredSlides={!isMobile} // Only center on desktop
-            slidesPerView="auto" // Always use 'auto'
+            centeredSlides={true} // Always center
+            loop={false}
+            speed={600}
+            // Layout Configuration
+            // For Cards (Mobile): effectively 1 slide
+            // For Coverflow (Desktop): 'auto' allows side previews
+            slidesPerView={isMobile ? 1 : 'auto'}
             spaceBetween={isMobile ? 0 : 30}
+            // Specific Effect Settings
             cardsEffect={{
               perSlideOffset: 8,
               perSlideRotate: 2,
@@ -220,84 +241,64 @@ Thank you!`,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
-            loop={false} // Disable loop for cards effect
-            speed={600}
-            allowTouchMove={true}
+            // Container Styling
             style={{
-              // Add container sizing
-              maxWidth: isMobile ? '90%' : '100%',
+              // On Mobile (Cards): The container width determines the card width
+              // On Desktop (Coverflow): Container is full width, slides size themselves
+              width: isMobile ? '280px' : '100%',
+              maxWidth: isMobile ? '320px' : '1000px',
               margin: '0 auto',
             }}
-            touchEventsTarget="container"
-            preventInteractionOnTransition={true}
-            touchRatio={1}
-            touchAngle={45}
-            passiveListeners={false}
           >
             {reviews.map((review) => (
               <SwiperSlide
                 key={review.id}
                 style={{
-                  width: isMobile ? '85vw' : 'auto', // Use viewport width on mobile
-                  maxWidth: isMobile ? '340px' : '800px',
-                  overflow: 'visible',
+                  // Desktop: Fixed width for coverflow slides
+                  // Mobile: 100% of the container (which we sized above)
+                  width: isMobile ? '100%' : '400px',
+                  height: 'auto',
+                  display: 'flex', // Ensures slide height matches content
+                  justifyContent: 'center',
                 }}
               >
                 <Box
                   sx={{
                     position: 'relative',
                     width: '100%',
-                    minHeight: { xs: 420, sm: 460, md: 400 },
-                    maxHeight: { xs: '75vh', sm: 'none' },
+                    // Height adjustments
+                    minHeight: { xs: 400, sm: 420, md: 400 },
                     background:
                       theme.palette.mode === 'light'
                         ? `linear-gradient(135deg, ${alpha('#fff', 0.9)} 0%, ${alpha('#faf8f3', 0.95)} 100%)`
                         : `linear-gradient(135deg, ${alpha('#424242', 0.95)} 0%, ${alpha('#2a2a2a', 1)} 100%)`,
                     backdropFilter: 'blur(20px)',
                     borderRadius: { xs: '20px', md: '24px' },
-                    p: { xs: 2.5, sm: 3.5, md: 5 },
+                    p: { xs: 3, md: 5 },
+                    // Shadow adjustments
                     boxShadow:
-                      // eslint-disable-next-line no-nested-ternary
                       theme.palette.mode === 'light'
-                        ? isMobile
-                          ? '0 10px 40px rgba(148, 145, 70, 0.15)'
-                          : '0 20px 60px rgba(148, 145, 70, 0.2)'
-                        : isMobile
-                          ? '0 10px 40px rgba(0, 0, 0, 0.3)'
-                          : '0 20px 60px rgba(0, 0, 0, 0.4)',
-                    border:
-                      theme.palette.mode === 'light'
-                        ? `1px solid ${alpha('#949146', 0.15)}`
-                        : `1px solid ${alpha('#949146', 0.2)}`,
+                        ? '0 10px 40px rgba(148, 145, 70, 0.15)'
+                        : '0 10px 40px rgba(0, 0, 0, 0.3)',
+                    border: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
-                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                    overflow: 'hidden',
-                    ...(!isMobile && {
-                      '&:hover': {
-                        transform: 'translateY(-8px)',
-                        boxShadow:
-                          theme.palette.mode === 'light'
-                            ? '0 25px 80px rgba(148, 145, 70, 0.25)'
-                            : '0 25px 80px rgba(0, 0, 0, 0.5)',
-                      },
-                    }),
+                    userSelect: 'none', // Improves dragging experience
                   }}
                 >
                   {/* Top Quote Icon */}
                   <Box
                     sx={{
                       position: 'absolute',
-                      top: { xs: 16, sm: 24, md: 28 },
-                      left: { xs: 16, sm: 24, md: 28 },
-                      opacity: { xs: 0.06, md: 0.08 },
-                      zIndex: 0,
+                      top: 24,
+                      left: 24,
+                      opacity: 0.08,
                     }}
                   >
                     <FormatQuoteIcon
                       sx={{
-                        fontSize: { xs: '3rem', sm: '4rem', md: '5rem' },
+                        fontSize: '4rem',
                         color: theme.palette.primary.main,
                         transform: 'rotate(180deg)',
                       }}
@@ -312,28 +313,17 @@ Thank you!`,
                       alignItems: 'center',
                       justifyContent: 'center',
                       zIndex: 1,
-                      py: { xs: 2, md: 2 },
-                      px: { xs: 0.5, sm: 2 },
-                      overflow: 'auto',
-                      '&::-webkit-scrollbar': {
-                        width: '4px',
-                      },
-                      '&::-webkit-scrollbar-thumb': {
-                        backgroundColor: alpha(theme.palette.primary.main, 0.3),
-                        borderRadius: '4px',
-                      },
+                      py: 2,
                     }}
                   >
                     <Typography
                       variant="body1"
                       sx={{
-                        fontFamily: "'Georgia', 'Times New Roman', serif",
-                        fontSize: { xs: '0.9rem', sm: '1rem', md: '1.15rem' },
-                        lineHeight: { xs: 1.6, md: 1.8 },
-                        color: theme.palette.text.primary,
+                        fontFamily: "'Georgia', serif",
+                        fontSize: { xs: '0.95rem', md: '1.1rem' },
+                        lineHeight: 1.6,
                         textAlign: 'center',
                         whiteSpace: 'pre-line',
-                        position: 'relative',
                       }}
                     >
                       {review.text}
@@ -346,34 +336,18 @@ Thank you!`,
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
-                      gap: 0.5,
-                      pt: { xs: 2.5, md: 3 },
-                      mt: { xs: 1.5, md: 2 },
-                      borderTop: `2px solid ${alpha(theme.palette.primary.main, 0.1)}`,
-                      position: 'relative',
+                      mt: 2,
+                      pt: 2,
+                      borderTop: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`,
                       zIndex: 1,
                     }}
                   >
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        fontWeight: 700,
-                        fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
-                        color: theme.palette.text.primary,
-                        letterSpacing: '0.3px',
-                      }}
-                    >
+                    <Typography variant="h6" sx={{ fontWeight: 700 }}>
                       {review.name}
                     </Typography>
                     <Typography
                       variant="caption"
-                      sx={{
-                        color: alpha(theme.palette.text.secondary, 0.8),
-                        fontSize: { xs: '0.8rem', md: '0.85rem' },
-                        textTransform: 'uppercase',
-                        letterSpacing: '1.5px',
-                        fontWeight: 500,
-                      }}
+                      sx={{ textTransform: 'uppercase', letterSpacing: 1 }}
                     >
                       {review.role}
                     </Typography>
@@ -383,15 +357,14 @@ Thank you!`,
                   <Box
                     sx={{
                       position: 'absolute',
-                      bottom: { xs: 16, sm: 24, md: 28 },
-                      right: { xs: 16, sm: 24, md: 28 },
-                      opacity: { xs: 0.06, md: 0.08 },
-                      zIndex: 0,
+                      bottom: 24,
+                      right: 24,
+                      opacity: 0.08,
                     }}
                   >
                     <FormatQuoteIcon
                       sx={{
-                        fontSize: { xs: '3rem', sm: '4rem', md: '5rem' },
+                        fontSize: '4rem',
                         color: theme.palette.primary.main,
                       }}
                     />
@@ -402,16 +375,10 @@ Thank you!`,
           </Swiper>
         </Box>
 
-        {/* Mobile Swipe Hint */}
         {isMobile && (
           <Typography
             variant="caption"
-            sx={{
-              color: alpha(theme.palette.text.secondary, 0.6),
-              fontSize: '0.85rem',
-              textAlign: 'center',
-              mt: -2,
-            }}
+            sx={{ color: 'text.secondary', textAlign: 'center' }}
           >
             👆 Swipe to see more reviews
           </Typography>
