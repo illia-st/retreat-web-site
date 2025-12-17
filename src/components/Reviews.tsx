@@ -194,8 +194,8 @@ Thank you!`,
             ]}
             effect={isMobile ? 'cards' : 'coverflow'}
             grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={isMobile ? 1 : 'auto'}
+            centeredSlides={!isMobile} // Only center on desktop
+            slidesPerView="auto" // Always use 'auto'
             spaceBetween={isMobile ? 0 : 30}
             cardsEffect={{
               perSlideOffset: 8,
@@ -220,33 +220,27 @@ Thank you!`,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
-            loop={isMobile}
+            loop={false} // Disable loop for cards effect
             speed={600}
-            longSwipesRatio={0.3}
-            threshold={10}
-            resistance={true}
-            resistanceRatio={0.85}
             allowTouchMove={true}
-            observer={true}
-            observeParents={true}
-            watchOverflow={true}
-            breakpoints={{
-              768: {
-                slidesPerView: 1.2,
-                spaceBetween: 30,
-              },
-              1024: {
-                slidesPerView: 1.3,
-                spaceBetween: 40,
-              },
+            style={{
+              // Add container sizing
+              maxWidth: isMobile ? '90%' : '100%',
+              margin: '0 auto',
             }}
+            touchEventsTarget="container"
+            preventInteractionOnTransition={true}
+            touchRatio={1}
+            touchAngle={45}
+            passiveListeners={false}
           >
             {reviews.map((review) => (
               <SwiperSlide
                 key={review.id}
                 style={{
-                  width: isMobile ? '100%' : 'auto',
-                  maxWidth: isMobile ? '100%' : '800px',
+                  width: isMobile ? '85vw' : 'auto', // Use viewport width on mobile
+                  maxWidth: isMobile ? '340px' : '800px',
+                  overflow: 'visible',
                 }}
               >
                 <Box
@@ -263,6 +257,7 @@ Thank you!`,
                     borderRadius: { xs: '20px', md: '24px' },
                     p: { xs: 2.5, sm: 3.5, md: 5 },
                     boxShadow:
+                      // eslint-disable-next-line no-nested-ternary
                       theme.palette.mode === 'light'
                         ? isMobile
                           ? '0 10px 40px rgba(148, 145, 70, 0.15)'
