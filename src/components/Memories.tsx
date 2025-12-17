@@ -25,32 +25,65 @@ import '../css/memories.css';
 const mediaItems = [
   {
     type: 'video',
+    url: 'https://www.youtube.com/watch?v=xS7_hvP8Qt8',
+  },
+  {
+    type: 'image',
+    // url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+    url: '/swiss2025/2026/nice_photos/1.jpeg',
+  },
+  {
+    type: 'image',
+    url: '/swiss2025/2026/together_photos/1.jpeg',
+  },
+  {
+    type: 'image',
+    url: '/swiss2025/2026/food/4.jpeg',
+  },
+  {
+    type: 'image',
+    url: '/swiss2025/2026/together_photos/2.png',
+  },
+  {
+    type: 'image',
+    url: '/swiss2025/2026/together_photos/3.png',
+  },
+  {
+    type: 'image',
+    url: '/swiss2025/2026/nice_photos/2.jpeg',
+  },
+  {
+    type: 'image',
+    url: '/swiss2025/2026/food/3.jpeg',
+  },
+  {
+    type: 'video',
     url: 'https://www.youtube.com/watch?v=ag2A7Hlm6nI',
     thumbnail: 'https://img.youtube.com/vi/ag2A7Hlm6nI/maxresdefault.jpg',
   },
   {
     type: 'image',
-    url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+    url: '/swiss2025/2026/food/2.jpeg',
   },
   {
     type: 'image',
-    url: 'https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb',
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/watch?v=xS7_hvP8Qt8',
+    url: '/tenerife2024/memories/1.jpg',
   },
   {
     type: 'image',
-    url: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846',
+    url: '/tenerife2024/memories/2.PNG',
   },
   {
     type: 'image',
-    url: 'https://images.unsplash.com/photo-1545389336-cf090694435e',
+    url: '/tenerife2024/memories/3.PNG',
   },
   {
     type: 'image',
-    url: 'https://images.unsplash.com/photo-1552693673-1bf28ccf6b56',
+    url: '/tenerife2024/memories/4.PNG',
+  },
+  {
+    type: 'image',
+    url: '/tenerife2024/memories/5.png',
   },
 ];
 
