@@ -43,7 +43,7 @@ export default function AvailableRetreats() {
   return (
     <Box id="retreats" sx={{ my: 5 }}>
       <Typography variant="h3" align="center" gutterBottom>
-        Our Next Retreat in 2025
+        Spring Awakening Yoga Retreat. 2.0
       </Typography>
 
       {/* Loading Mask */}
