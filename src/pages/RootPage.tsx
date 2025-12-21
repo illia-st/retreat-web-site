@@ -7,8 +7,6 @@ import TogetherSection from '../components/TogetherSection';
 import SocialSection from '../components/SocialsSection';
 import AvailableRetreats from './AvailableRetreats';
 import AppInterface from '../interfaces/AppInterface';
-import ReviewComponent from '../components/Reviews';
-import Video from '../components/Video';
 import Memories from '../components/Memories';
 
 interface RootPageIterface extends AppInterface {}
