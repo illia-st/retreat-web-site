@@ -63,15 +63,11 @@ const mediaItems = [
   },
   {
     type: 'image',
-    url: '/swiss2025/2026/food/2.jpeg',
-  },
-  {
-    type: 'image',
     url: '/tenerife2024/memories/1.jpg',
   },
   {
     type: 'image',
-    url: '/tenerife2024/memories/2.PNG',
+    url: '/tenerife2024/memories/2.png',
   },
   {
     type: 'image',
@@ -84,6 +80,10 @@ const mediaItems = [
   {
     type: 'image',
     url: '/tenerife2024/memories/5.png',
+  },
+  {
+    type: 'image',
+    url: '/tenerife2024/memories/6.png',
   },
 ];
 
@@ -116,7 +116,7 @@ function Memories() {
   return (
     // FIX 1: Changed 'm: 5' to specific padding.
     // On mobile (xs), we reduce side padding to '2' so content isn't squished.
-    <Box sx={{ py: 5, px: { xs: 2, md: 5 }, maxWidth: 'lg', mx: 'auto' }}>
+    <Box sx={{ py: 5, px: { xs: 4.5, md: 5 }, maxWidth: 'lg', mx: 'auto' }}>
       <ReviewComponent />
 
       {/* --- Header Section --- */}
@@ -174,7 +174,7 @@ function Memories() {
         // don't create a horizontal scrollbar on the browser window.
         <Box
           sx={{
-            overflow: 'visible',
+            overflow: 'hidden',
           }}
         >
           {/* Note on styling: 
@@ -187,7 +187,7 @@ function Memories() {
               spaceBetween={16}
               slidesPerView={1.2}
               centeredSlides={true}
-              pagination={{ clickable: true, dynamicBullets: true }}
+              pagination={false}
               style={{
                 paddingBottom: '40px',
                 paddingLeft: '16px',
