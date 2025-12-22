@@ -15,6 +15,8 @@ export default function RootPage({ setAppBarItemsCallback }: RootPageIterface) {
   useEffect(() => {
     setAppBarItemsCallback([
       { id: 'greeting', label: 'Greeting' },
+      { id: 'feedback', label: 'What Our Guests Say' },
+      { id: 'memories', label: 'Memories from previous retreats' },
       { id: 'retreats', label: 'Available Retreats' },
       { id: 'basic-info', label: 'Basic Info' },
       { id: 'about-us', label: 'About Us' },
@@ -25,7 +27,6 @@ export default function RootPage({ setAppBarItemsCallback }: RootPageIterface) {
     <>
       <GreetingPage />
       <Divider />
-      {/* <Video /> */}
       <Memories />
       <Divider />
       <AvailableRetreats />

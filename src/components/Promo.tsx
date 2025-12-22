@@ -81,6 +81,7 @@ function SwissPromo() {
 
   return (
     <Container
+      id="greeting"
       sx={{
         mt: 4,
         mb: 4,

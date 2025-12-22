@@ -32,13 +32,13 @@ export default function SwissRetreat({
   useEffect(() => {
     // Update AppBar items only once on component mount
     setAppBarItemsCallback([
-      { id: 'greeting', label: 'Greeting' },
       { id: 'price', label: 'Price' },
+      { id: 'greeting', label: 'Greeting' },
+      { id: 'register', label: 'Register' },
       { id: 'live', label: 'Where will we live?' },
       { id: 'get_there', label: 'How to get there?' },
       { id: 'included', label: 'Included in the price' },
       { id: 'faq_section', label: 'What to take?' },
-      { id: 'register', label: 'Register' },
       { id: 'socials', label: 'Social Networks' },
     ]);
   }, [setAppBarItemsCallback]); // Depend only on callback
@@ -54,7 +54,7 @@ export default function SwissRetreat({
       <Divider />
       <Price />
       <Divider />
-      <SwissPromo />
+      <SwissPromo />s
       <Divider />
       <Register />
       <Divider />

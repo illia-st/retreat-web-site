@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React, { useState } from 'react';
 import {
   Button,
@@ -22,8 +23,22 @@ const validationSchema = Yup.object({
     .required('Email address is required'),
 });
 
-export default function Price() {
-  const [open, setOpen] = useState(false);
+interface PriceProps {
+  open?: boolean;
+  onClose?: () => void;
+  title?: string;
+  description?: string;
+  showButton?: boolean;
+}
+
+export default function Price({
+  open: externalOpen,
+  onClose: externalOnClose,
+  title = 'Find out the Price',
+  description = "Please enter your email address to proceed. After submitting, you'll receive detailed pricing information directly to your inbox.",
+  showButton = true,
+}: PriceProps) {
+  const [internalOpen, setInternalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [snackbar, setSnackbar] = useState({
     open: false,
@@ -31,8 +46,21 @@ export default function Price() {
     severity: 'success' as 'success' | 'error',
   });
 
+  // Use external open state if provided, otherwise use internal state
+  const isOpen = externalOpen !== undefined ? externalOpen : internalOpen;
+
   const handleDialogOpen = () => {
-    setOpen(true);
+    setInternalOpen(true);
+  };
+
+  const handleDialogClose = () => {
+    if (externalOnClose) {
+      externalOnClose();
+    } else {
+      setInternalOpen(false);
+    }
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
+    formik.resetForm();
   };
 
   const handleSnackbarClose = () => {
@@ -52,8 +80,7 @@ export default function Price() {
       };
 
       try {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const response = await emailjs.send(
+        await emailjs.send(
           'service_1dt95rs',
           'template_tjztn5j',
           templateParams,
@@ -64,10 +91,9 @@ export default function Price() {
 
         setSnackbar({
           open: true,
-          message: 'Success! Check your email for pricing details.',
+          message: 'Success! Check your email for details.',
           severity: 'success',
         });
-        // eslint-disable-next-line @typescript-eslint/no-use-before-define
         handleDialogClose();
       } catch (err) {
         setSnackbar({
@@ -81,55 +107,50 @@ export default function Price() {
     },
   });
 
-  const handleDialogClose = () => {
-    setOpen(false);
-    formik.resetForm();
-  };
-
   return (
-    <Container
-      id="price"
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        pt: { xs: 8, sm: 12 },
-        pb: { xs: 8, sm: 12 },
-      }}
-    >
-      <Button
-        variant="contained"
-        onClick={handleDialogOpen}
-        sx={{
-          height: '100px',
-          width: '250px',
-          fontSize: '2rem',
-          textTransform: 'none',
-          background: 'linear-gradient(45deg, #f44336 30%, #ff5722 90%)',
-          boxShadow: '0 3px 8px 2px rgba(244, 67, 54, .3)',
-          transition: 'all 0.3s ease',
-          '&:hover': {
-            background: 'linear-gradient(45deg, #d32f2f 30%, #f44336 90%)',
-            boxShadow: '0 6px 12px 4px rgba(244, 67, 54, .4)',
-            transform: 'translateY(-2px)',
-          },
-          '&:active': {
-            transform: 'translateY(0)',
-          },
-        }}
-        aria-label="Find out pricing information"
-      >
-        Find out the Price
-      </Button>
+    <>
+      {showButton && (
+        <Container
+          id="price"
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            pt: { xs: 8, sm: 12 },
+            pb: { xs: 8, sm: 12 },
+          }}
+        >
+          <Button
+            variant="contained"
+            onClick={handleDialogOpen}
+            sx={{
+              height: '100px',
+              width: '250px',
+              fontSize: '2rem',
+              textTransform: 'none',
+              background: 'linear-gradient(45deg, #f44336 30%, #ff5722 90%)',
+              boxShadow: '0 3px 8px 2px rgba(244, 67, 54, .3)',
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                background: 'linear-gradient(45deg, #d32f2f 30%, #f44336 90%)',
+                boxShadow: '0 6px 12px 4px rgba(244, 67, 54, .4)',
+                transform: 'translateY(-2px)',
+              },
+              '&:active': {
+                transform: 'translateY(0)',
+              },
+            }}
+            aria-label="Find out pricing information"
+          >
+            Find out the Price
+          </Button>
+        </Container>
+      )}
 
-      <Dialog open={open} onClose={handleDialogClose} maxWidth="sm" fullWidth>
-        <DialogTitle>Find out the Price</DialogTitle>
+      <Dialog open={isOpen} onClose={handleDialogClose} maxWidth="sm" fullWidth>
+        <DialogTitle>{title}</DialogTitle>
         <DialogContent>
-          <DialogContentText sx={{ mb: 2 }}>
-            Please enter your email address to proceed. After submitting,
-            you&apos;ll receive detailed pricing information directly to your
-            inbox.
-          </DialogContentText>
+          <DialogContentText sx={{ mb: 2 }}>{description}</DialogContentText>
           <form onSubmit={formik.handleSubmit}>
             <TextField
               autoFocus
@@ -184,6 +205,6 @@ export default function Price() {
           {snackbar.message}
         </Alert>
       </Snackbar>
-    </Container>
+    </>
   );
 }

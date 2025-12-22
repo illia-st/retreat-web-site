@@ -114,13 +114,12 @@ function Memories() {
   };
 
   return (
-    // FIX 1: Changed 'm: 5' to specific padding.
-    // On mobile (xs), we reduce side padding to '2' so content isn't squished.
     <Box sx={{ py: 5, px: { xs: 4.5, md: 5 }, maxWidth: 'lg', mx: 'auto' }}>
       <ReviewComponent />
 
       {/* --- Header Section --- */}
       <Box
+        id="memories"
         sx={{
           display: 'flex',
           justifyContent: 'center',
@@ -168,19 +167,11 @@ function Memories() {
       {/* --- HYBRID LAYOUT --- */}
 
       {isMobile ? (
-        // === MOBILE VIEW: Horizontal Swiper ===
-        // FIX 2: Added overflow: 'hidden' here.
-        // This ensures the slides that hang off the screen (due to slidesPerView=1.2)
-        // don't create a horizontal scrollbar on the browser window.
         <Box
           sx={{
             overflow: 'hidden',
           }}
         >
-          {/* Note on styling: 
-             If you want the slides to touch the edge of the screen (Full Bleed), 
-             you can use mx: -2 here to counter the parent padding.
-          */}
           <Box sx={{ mx: -2 }}>
             <Swiper
               modules={[Pagination]}
@@ -247,7 +238,6 @@ function Memories() {
           </Box>
         </Box>
       ) : (
-        // === DESKTOP VIEW: Masonry ===
         <Masonry
           breakpointCols={breakpointColumns}
           className="masonry-grid"
