@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Divider, Typography } from '@mui/material';
 import AppInterface from '../../interfaces/AppInterface';
-import RetreatHero from '../../components/RetreatHero';
+// import RetreatHero from '../../components/RetreatHero';
 
 interface Tenerife2025Iterface extends AppInterface {}
 
@@ -14,10 +14,10 @@ export default function Tenerife2025Retreat({
   }, [setAppBarItemsCallback]); // Depend only on callback
   return (
     <>
-      <RetreatHero
+      {/* <RetreatHero
         mainPhoto="/places/puerto-de-la-cruz-15.jpeg"
         retreatName="Tenerife, Canary Islands, Spain"
-      />
+      /> */}
       <Divider />
       <Typography
         variant="h2"

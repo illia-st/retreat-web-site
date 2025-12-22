@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Divider, Typography } from '@mui/material';
 import AppInterface from '../../interfaces/AppInterface';
-import RetreatHero from '../../components/RetreatHero';
+// import RetreatHero from '../../components/RetreatHero';
 
 interface Port2025Iterface extends AppInterface {}
 
@@ -14,10 +14,10 @@ export default function Port2025Retreat({
   }, [setAppBarItemsCallback]); // Depend only on callback
   return (
     <>
-      <RetreatHero
+      {/* <RetreatHero
         mainPhoto="/portugal-4442631_1280.jpg"
         retreatName="Portugal Late Spring 2025"
-      />
+      /> */}
       <Divider />
       <Typography
         variant="h2"
