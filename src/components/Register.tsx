@@ -1,7 +1,4 @@
-/* eslint-disable no-console */
-import React from 'react';
 import { Button, Typography, Stack, Container } from '@mui/material';
-import { orange } from '@mui/material/colors';
 
 const actionUrl = 'https://forms.gle/NrGH7ikfNo9UTUmeA';
 
@@ -34,16 +31,28 @@ function Register() {
         }}
       >
         <Button
-          type="submit"
           variant="contained"
           href={actionUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
             height: '100px',
             width: '250px',
-            fontSize: '1.6rem',
-            backgroundColor: orange[300],
+            fontSize: '2rem',
             textTransform: 'none',
+            background: 'linear-gradient(45deg, #f44336 30%, #ff5722 90%)',
+            boxShadow: '0 3px 8px 2px rgba(244, 67, 54, .3)',
+            transition: 'all 0.3s ease',
+            '&:hover': {
+              background: 'linear-gradient(45deg, #d32f2f 30%, #f44336 90%)',
+              boxShadow: '0 6px 12px 4px rgba(244, 67, 54, .4)',
+              transform: 'translateY(-2px)',
+            },
+            '&:active': {
+              transform: 'translateY(0)',
+            },
           }}
+          aria-label="Fill the registration form"
         >
           Fill the form
         </Button>

@@ -56,7 +56,11 @@ export default function SwissRetreat({
       <Divider />
       <SwissPromo />
       <Divider />
+      <Register />
+      <Divider />
       <ScheduleSection />
+      <Divider />
+      <Register />
       <Divider />
       <LivingSection
         description={location}
@@ -64,6 +68,8 @@ export default function SwissRetreat({
         accomodationUnits={accomodationUnits}
         accommodationDesc={descriptionForDesc}
       />
+      <Divider />
+      <Register />
       <Divider />
       <TransportInfo data={arrivalData} />
       <Divider />
