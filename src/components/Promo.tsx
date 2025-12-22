@@ -12,21 +12,31 @@ export interface PromoInterface {
   photo: string;
 }
 
-const photoLeft = '/swiss2025/vikasForSwissAsana.PNG';
+const photoLeft = '/swiss2025/2026/promo/2.jpeg';
 const textRight = `
-  Welcome to our Spring Awakening Yoga Retreat, a space for true renewal and gentle transformation.
+  <strong>Welcome to our Spring Equinox Yoga Retreat 2.0 — a space for gentle renewal, deep rest, and heartfelt connection.</strong>
 
-  Imagine mornings filled with yoga and pranayama in the fresh embrace of the forest, moments of mindful  under the open sky in the mountains, and sharing warm tea surrounded by nature's beauty.
+  We are hosting this retreat for the second year in the same beautiful place and at the same special time. Our hope is that it becomes a cherished tradition — a warm gathering of friends and a chance to pause, recharge, and return to yourself just as true spring begins to bloom.
 
-  Here, we create a sanctuary for your body and soul to rest, recharge, and reconnect. With heartfelt care, we've designed a program to bring you balance, joy, and tranquility, all at an affordable price.
+  Imagine starting your mornings with yoga and pranayama in the fresh embrace of the forest, practicing mindfulness under open mountain skies, and sharing warm tea in the quiet beauty of nature.
 
-  This retreat is more than just a getaway - it's an invitation to nurture yourself and embrace the magic of spring. Wouldn't this be perfect for you?
+  Here, we create a sanctuary where your body and soul can soften, restore, and find new energy.
+  With great care, we’ve crafted a program that brings balance, joy, and tranquility — all at a thoughtful, accessible price.
+
+  This retreat is more than just a weekend away; it’s an invitation to nurture yourself, reconnect with what matters, and welcome the magic of spring.
+  We would be so happy to share these days with you.
   `;
-const photoRight = '/swiss2025/abstractPromo.JPG';
+const photoRight = '/swiss2025/2026/promo/3.jpg';
 const textLeft = `
-  The Spring Equinox marks a moment of perfect balance between light and darkness, reminding us of nature’s rhythm and our own inner harmony. This sacred turning point invites renewal, growth, and deeper connection with ourselves and the world around us.
+  With heartfelt intention, we’ve crafted an updated program that weaves together movement, breath, ritual, and reflection — all designed to support your renewal during this magical seasonal transition. And as always, we keep it accessible, warm, and welcoming.
+  
+  <strong>This retreat is more than an escape.</strong>
 
-  Through thoughtfully crafted yoga practices, meditation, and moments of stillness, our retreat will help you align with this powerful energy, planting seeds of transformation and awakening your true potential.
+It’s a second chapter, a deepening, an invitation to honor yourself and step into the new cycle with clarity, balance, and joy.
+The Spring Equinox marks a moment of perfect balance between light and darkness, reminding us of nature’s rhythm and our own inner harmony. This sacred turning point invites renewal, growth, and deeper connection with ourselves and the world around us.
+
+Does this feel like your moment to return — or to join us for the first time?
+
   `;
 
 function RightPhoto() {
@@ -60,9 +70,8 @@ function LeftText() {
         fontSize: '1.6rem',
         lineHeight: 1.6,
       }}
-    >
-      {textLeft}
-    </Typography>
+      dangerouslySetInnerHTML={{ __html: textLeft }}
+    />
   );
 }
 
@@ -110,9 +119,8 @@ function SwissPromo() {
               fontSize: '1.6rem',
               lineHeight: 1.6,
             }}
-          >
-            {textRight}
-          </Typography>
+            dangerouslySetInnerHTML={{ __html: textRight }}
+          />
         </Grid>
         {isXs ? (
           <>

@@ -13,10 +13,8 @@ import AppAppBar, { CustomMenuItemProps } from './components/AppAppBar';
 import CustomSpeedDial from './components/Dial';
 
 import RootPage from './pages/RootPage';
-import Port2025Retreat from './pages/retreats/Port2025';
-import Swiss2025Retreat from './pages/retreats/Swiss2025';
+import SwissRetreat from './pages/retreats/Swiss';
 import AppInterface from './interfaces/AppInterface';
-import Tenerife2025Retreat from './pages/retreats/Tenerife2025';
 
 export function App({ setAppBarItemsCallback }: AppInterface) {
   return (
@@ -26,12 +24,12 @@ export function App({ setAppBarItemsCallback }: AppInterface) {
         element={<RootPage setAppBarItemsCallback={setAppBarItemsCallback} />}
       />
       <Route
-        path="/swiss-2025"
+        path="/swiss"
         element={
-          <Swiss2025Retreat setAppBarItemsCallback={setAppBarItemsCallback} />
+          <SwissRetreat setAppBarItemsCallback={setAppBarItemsCallback} />
         }
       />
-      <Route
+      {/* <Route
         path="/port-2025"
         element={
           <Port2025Retreat setAppBarItemsCallback={setAppBarItemsCallback} />
@@ -44,7 +42,7 @@ export function App({ setAppBarItemsCallback }: AppInterface) {
             setAppBarItemsCallback={setAppBarItemsCallback}
           />
         }
-      />
+      /> */}
       <Route
         path="/diplomas"
         element={<Diplomas setAppBarItemsCallback={setAppBarItemsCallback} />}

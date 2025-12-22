@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Divider, useMediaQuery, useTheme } from '@mui/material';
+import { Divider } from '@mui/material';
 import AppInterface from '../../interfaces/AppInterface';
 
 import FAQ from '../../components/FAQ';
@@ -24,13 +24,11 @@ import '../../css/retreatHeader.css';
 import SwissPromo from '../../components/Promo';
 import ScheduleSection from '../../components/ScheduleSection';
 
-interface Swiss2025Iterface extends AppInterface {}
+interface SwissInterface extends AppInterface {}
 
-export default function Swiss2025Retreat({
+export default function SwissRetreat({
   setAppBarItemsCallback,
-}: Swiss2025Iterface) {
-  const theme = useTheme();
-  const isXs = useMediaQuery(theme.breakpoints.down('sm'));
+}: SwissInterface) {
   useEffect(() => {
     // Update AppBar items only once on component mount
     setAppBarItemsCallback([
@@ -47,8 +45,11 @@ export default function Swiss2025Retreat({
   return (
     <>
       <RetreatHero
-        mainPhoto="/swiss2025/aussen-2.jpg"
-        retreatName={`<div class="retreatHeader ${isXs ? 'retreatHeaderVerySmallText' : 'retreatHeaderBiggerText'}">Waltensburg/Vuorz, Graubünden, Switzerland</div><div class="retreatHeader retreatHeaderSmallerText">21-23 March 2025</div>`}
+        mainPhoto="/swiss2025/main-hotel.jpg"
+        title="Spring Awakening Yoga Retreat 2.0"
+        subtitle="Embracing the Spring Equinox, a transformative point of renewal, balance, and intention."
+        location="Waltensburg/Vuorz, Graubünden, Switzerland"
+        date="20-22 March 2026"
       />
       <Divider />
       <Price />

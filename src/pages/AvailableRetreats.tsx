@@ -17,7 +17,7 @@ const retreat = {
     'Embracing the Spring Equinox, a transformative point of renewal, balance, and intention.',
   date: '20-22 March 2026',
   image: '/swiss2025/promo.JPG',
-  link: '/swiss-2025',
+  link: '/swiss',
 };
 
 export default function AvailableRetreats() {
